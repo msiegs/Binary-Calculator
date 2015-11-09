@@ -37,7 +37,7 @@ public class RecursiveMath implements Math {
     public int mul_acc(int sum, int lhs, int rhs) {
 	if (rhs == 0) return 0;
 	if (rhs == 1) return sum;
-	return mul_acc(add(sum,lhs),lhs,pred(rhs)));
+	return mul_acc(add(sum,lhs),lhs,pred(rhs));
     } // mul_acc
 
     public int div(int lhs, int rhs) {
@@ -57,10 +57,15 @@ public class RecursiveMath implements Math {
 	if (n == 0) return product;
 	return fac_acc(n * product, n - 1);
     } // fac_acc
-
+    
     public int pow(int lhs, int rhs) {
 	return pow_acc(1, lhs, rhs);
     } // pow
+
+    public int pow_acc(int acc,int lhs,int rhs) {
+	if (rhs == 0) return acc;
+	return pow_acc(mul(acc,lhs), lhs, pred(rhs));
+    } //pow_acc
     
     public int lshift(int lhs, int rhs) {
         throw new UnsupportedOperationException();
