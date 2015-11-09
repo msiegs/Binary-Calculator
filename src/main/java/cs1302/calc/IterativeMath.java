@@ -20,15 +20,31 @@ public class IterativeMath implements Math {
     } // dec
 
     public int add(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+        int sum = lhs;
+	while (rhs > 0) {
+	    sum = inc(sum);
+	    rhs = dec(rhs);
+	} // while
+	return sum;
     } // add
 
     public int sub(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	if (rhs > lhs) return 0;
+	while (rhs != 0) {
+	    lhs = pred(lhs);
+	    rhs = pred(rhs);
+	} // while
+	return lhs;
     } // sub
 
     public int mul(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+        int sum = lhs;
+	if (rhs == 0) return 0;
+	while (rhs > 1) {
+	    sum = add(sum,lhs);
+	    rhs = pred(rhs);
+	} // while
+	return sum;
     } // mul
 
     public int div(int lhs, int rhs) {
