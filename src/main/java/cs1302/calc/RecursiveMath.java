@@ -20,11 +20,14 @@ public class RecursiveMath implements Math {
     } // dec
 
     public int add(int lhs, int rhs) {
-	
+	if (rhs == 0) return lhs;
+	return add(succ(lhs), pred(rhs));
     } // add
 
     public int sub(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	if (rhs == 0) return lhs;
+	if (rhs > lhs) return 0;
+	return sub(pred(lhs), pred(rhs));
     } // sub
 
     public int mul(int lhs, int rhs) {
@@ -56,7 +59,7 @@ public class RecursiveMath implements Math {
     } // fac_acc
 
     public int pow(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	return pow_acc(1, lhs, rhs);
     } // pow
     
     public int lshift(int lhs, int rhs) {
