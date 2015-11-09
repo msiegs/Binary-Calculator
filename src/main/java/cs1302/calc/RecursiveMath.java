@@ -20,7 +20,7 @@ public class RecursiveMath implements Math {
     } // dec
 
     public int add(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	
     } // add
 
     public int sub(int lhs, int rhs) {
@@ -28,17 +28,33 @@ public class RecursiveMath implements Math {
     } // sub
 
     public int mul(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	return mul_acc(lhs, lhs, rhs);
     } // mul
 
+    public int mul_acc(int sum, int lhs, int rhs) {
+	if (rhs == 0) return 0;
+	if (rhs == 1) return sum;
+	return mul_acc(add(sum,lhs),lhs,pred(rhs)));
+    } // mul_acc
+
     public int div(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	return div_acc(0, lhs, rhs);
     } // div
 
+    public int div_acc(int count, int lhs, int rhs) {
+	if (lhs < rhs) return count;
+	return div_acc(succ(count), sub(lhs, rhs), rhs);
+    } // div_acc
+
     public int fac(int n) {
-        throw new UnsupportedOperationException();
+	return fac_acc(1, n);
     } // fac
     
+    public int fac_acc(int product, int n) {
+	if (n == 0) return product;
+	return fac_acc(n * product, n - 1);
+    } // fac_acc
+
     public int pow(int lhs, int rhs) {
         throw new UnsupportedOperationException();
     } // pow
