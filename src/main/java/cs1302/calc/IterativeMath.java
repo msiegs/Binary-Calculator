@@ -48,7 +48,7 @@ public class IterativeMath implements Math {
     } // mul
 
     public int div(int lhs, int rhs) {
-	int sum = 0;
+	int sum = 0; // counter
 	while (lhs >= rhs) {
 		lhs = sub(lhs, rhs);
 		sum = succ(sum);
