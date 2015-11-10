@@ -31,8 +31,8 @@ public class IterativeMath implements Math {
     public int sub(int lhs, int rhs) {
 	if (rhs > lhs) return 0;
 	while (rhs != 0) {
-	    lhs = pred(lhs);
-	    rhs = pred(rhs);
+	    lhs = dec(lhs);
+	    rhs = dec(rhs);
 	} // while
 	return lhs;
     } // sub
@@ -42,7 +42,7 @@ public class IterativeMath implements Math {
 	if (rhs == 0) return 0;
 	while (rhs > 1) {
 	    sum = add(sum,lhs);
-	    rhs = pred(rhs);
+	    rhs = dec(rhs);
 	} // while
 	return sum;
     } // mul
@@ -51,7 +51,7 @@ public class IterativeMath implements Math {
 	int sum = 0; // counter
 	while (lhs >= rhs) {
 		lhs = sub(lhs, rhs);
-		sum = succ(sum);
+		sum = inc(sum);
 	} // while
 	return sum; 
     } // div
@@ -69,7 +69,7 @@ public class IterativeMath implements Math {
 	int acc = 1;
 	while (rhs > 0) {
 		acc = mul(acc, lhs);
-		rhs = pred(rhs);
+		rhs = dec(rhs);
 	} // while
 	return acc;
     } // pow
