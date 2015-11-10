@@ -48,7 +48,12 @@ public class IterativeMath implements Math {
     } // mul
 
     public int div(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	int sum = 0;
+	while (lhs >= rhs) {
+		lhs = sub(lhs, rhs);
+		sum = succ(sum);
+	} // while
+	return sum; 
     } // div
 
     public int fac(int n) {
