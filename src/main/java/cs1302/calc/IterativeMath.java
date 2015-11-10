@@ -57,11 +57,21 @@ public class IterativeMath implements Math {
     } // div
 
     public int fac(int n) {
-        throw new UnsupportedOperationException();
+	int acc = 1;
+	while (n > 0) {
+		acc = acc * n;
+		n = n - 1;
+	} // while
+	return acc;
     } // fac
     
     public int pow(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	int acc = 1;
+	while (rhs > 0) {
+		acc = mul(acc, lhs);
+		rhs = pred(rhs);
+	} // while
+	return acc;
     } // pow
     
     public int lshift(int lhs, int rhs) {
