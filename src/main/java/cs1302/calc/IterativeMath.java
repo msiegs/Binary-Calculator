@@ -12,11 +12,11 @@ package cs1302.calc;
 public class IterativeMath implements Math {
 
     public int inc(int n) {
-        throw new UnsupportedOperationException();
+	return (n + 1);
     } // inc
 
     public int dec(int n) {
-        throw new UnsupportedOperationException();
+	return (n - 1);  
     } // dec
 
     public int add(int lhs, int rhs) {
@@ -31,8 +31,8 @@ public class IterativeMath implements Math {
     public int sub(int lhs, int rhs) {
 	if (rhs > lhs) return 0;
 	while (rhs != 0) {
-	    lhs = pred(lhs);
-	    rhs = pred(rhs);
+	    lhs = dec(lhs);
+	    rhs = dec(rhs);
 	} // while
 	return lhs;
     } // sub
@@ -42,29 +42,44 @@ public class IterativeMath implements Math {
 	if (rhs == 0) return 0;
 	while (rhs > 1) {
 	    sum = add(sum,lhs);
-	    rhs = pred(rhs);
+	    rhs = dec(rhs);
 	} // while
 	return sum;
     } // mul
 
     public int div(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	int sum = 0; // counter
+	while (lhs >= rhs) {
+		lhs = sub(lhs, rhs);
+		sum = inc(sum);
+	} // while
+	return sum; 
     } // div
 
     public int fac(int n) {
-        throw new UnsupportedOperationException();
+	int acc = 1;
+	while (n > 0) {
+		acc = acc * n;
+		n = n - 1;
+	} // while
+	return acc;
     } // fac
     
     public int pow(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	int acc = 1;
+	while (rhs > 0) {
+		acc = mul(acc, lhs);
+		rhs = dec(rhs);
+	} // while
+	return acc;
     } // pow
     
     public int lshift(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	return mul(lhs, pow(2, rhs));       
     } // lshift
     
     public int rshift(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	return div(lhs, pow(2, rhs));
     } // rshift
 
 } // IterativeMath
