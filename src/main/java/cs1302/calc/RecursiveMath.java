@@ -12,11 +12,11 @@ package cs1302.calc;
 public class RecursiveMath implements Math {
 
     public int inc(int n) {
-        throw new UnsupportedOperationException();
+	return n + 1;
     } // inc
 
     public int dec(int n) {
-        throw new UnsupportedOperationException();
+	return n - 1;
     } // dec
 
     public int add(int lhs, int rhs) {
@@ -68,11 +68,11 @@ public class RecursiveMath implements Math {
     } //pow_acc
     
     public int lshift(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	return mul(lhs, pow(2,rhs));
     } // lshift
     
     public int rshift(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	return div(lhs, pow(2,rhs));
     } // rshift
 
 } // RecursiveMath
