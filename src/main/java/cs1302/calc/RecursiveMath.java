@@ -21,13 +21,13 @@ public class RecursiveMath implements Math {
 
     public int add(int lhs, int rhs) {
 	if (rhs == 0) return lhs;
-	return add(succ(lhs), pred(rhs));
+	return add(inc(lhs), dec(rhs));
     } // add
 
     public int sub(int lhs, int rhs) {
 	if (rhs == 0) return lhs;
 	if (rhs > lhs) return 0;
-	return sub(pred(lhs), pred(rhs));
+	return sub(dec(lhs), dec(rhs));
     } // sub
 
     public int mul(int lhs, int rhs) {
@@ -37,7 +37,7 @@ public class RecursiveMath implements Math {
     public int mul_acc(int sum, int lhs, int rhs) {
 	if (rhs == 0) return 0;
 	if (rhs == 1) return sum;
-	return mul_acc(add(sum,lhs),lhs,pred(rhs));
+	return mul_acc(add(sum,lhs),lhs,dec(rhs));
     } // mul_acc
 
     public int div(int lhs, int rhs) {
@@ -46,7 +46,7 @@ public class RecursiveMath implements Math {
 
     public int div_acc(int count, int lhs, int rhs) {
 	if (lhs < rhs) return count;
-	return div_acc(succ(count), sub(lhs, rhs), rhs);
+	return div_acc(inc(count), sub(lhs, rhs), rhs);
     } // div_acc
 
     public int fac(int n) {
@@ -64,7 +64,7 @@ public class RecursiveMath implements Math {
 
     public int pow_acc(int acc,int lhs,int rhs) {
 	if (rhs == 0) return acc;
-	return pow_acc(mul(acc,lhs), lhs, pred(rhs));
+	return pow_acc(mul(acc,lhs), lhs, dec(rhs));
     } //pow_acc
     
     public int lshift(int lhs, int rhs) {
