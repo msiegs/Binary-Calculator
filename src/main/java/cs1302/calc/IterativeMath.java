@@ -75,11 +75,11 @@ public class IterativeMath implements Math {
     } // pow
     
     public int lshift(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	return mul(lhs, pow(2, rhs));       
     } // lshift
     
     public int rshift(int lhs, int rhs) {
-        throw new UnsupportedOperationException();
+	return div(lhs, pow(2, rhs));
     } // rshift
 
 } // IterativeMath
