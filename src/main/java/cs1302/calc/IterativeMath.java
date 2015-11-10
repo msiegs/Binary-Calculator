@@ -12,11 +12,11 @@ package cs1302.calc;
 public class IterativeMath implements Math {
 
     public int inc(int n) {
-        throw new UnsupportedOperationException();
+	return (n + 1);
     } // inc
 
     public int dec(int n) {
-        throw new UnsupportedOperationException();
+	return (n - 1);  
     } // dec
 
     public int add(int lhs, int rhs) {
