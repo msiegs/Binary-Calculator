@@ -4,8 +4,8 @@
 
 package calc;
 
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -14,110 +14,170 @@ import javafx.scene.control.Button;
 public class Controller {
 
     @FXML // ResourceBundle that was given to the FXMLLoader
-	private ResourceBundle resources;
+	public ResourceBundle resources;
 
     @FXML // URL location of the FXML file that was given to the FXMLLoader
-	private URL location;
+	public URL location;
 
     @FXML // fx:id="mulButton"
-	private Button mulButton; // Value injected by FXMLLoader
+	public Button mulButton; // Value injected by FXMLLoader
 
     @FXML // fx:id="recButton"
-	private Button recButton; // Value injected by FXMLLoader
+	public Button recButton; // Value injected by FXMLLoader
 
     @FXML // fx:id="subButton"
-	private Button subButton; // Value injected by FXMLLoader
+	public Button subButton; // Value injected by FXMLLoader
 
     @FXML // fx:id="rButton"
-	private Button rButton; // Value injected by FXMLLoader
+	public Button rButton; // Value injected by FXMLLoader
 
     @FXML // fx:id="addButton"
-	private Button addButton; // Value injected by FXMLLoader
+	public Button addButton; // Value injected by FXMLLoader
 
     @FXML // fx:id="b0"
-	private Button b0; // Value injected by FXMLLoader
+	public Button b0; // Value injected by FXMLLoader
 
     @FXML // fx:id="b1"
-	private Button b1; // Value injected by FXMLLoader
+	public Button b1; // Value injected by FXMLLoader
 
     @FXML // fx:id="b2"
-	private Button b2; // Value injected by FXMLLoader
+	public Button b2; // Value injected by FXMLLoader
 
     @FXML // fx:id="b3"
-	private Button b3; // Value injected by FXMLLoader
+	public Button b3; // Value injected by FXMLLoader
 
     @FXML // fx:id="b4"
-	private Button b4; // Value injected by FXMLLoader
+	public Button b4; // Value injected by FXMLLoader
 
     @FXML // fx:id="b5"
-	private Button b5; // Value injected by FXMLLoader
+	public Button b5; // Value injected by FXMLLoader
 
     @FXML // fx:id="b6"
-	private Button b6; // Value injected by FXMLLoader
+	public Button b6; // Value injected by FXMLLoader
 
     @FXML // fx:id="b7"
-	private Button b7; // Value injected by FXMLLoader
+	public Button b7; // Value injected by FXMLLoader
 
     @FXML // fx:id="powButton"
-	private Button powButton; // Value injected by FXMLLoader
+	public Button powButton; // Value injected by FXMLLoader
 
     @FXML // fx:id="b8"
-	private Button b8; // Value injected by FXMLLoader
+	public Button b8; // Value injected by FXMLLoader
 
     @FXML // fx:id="lButton"
-	private Button lButton; // Value injected by FXMLLoader
+	public Button lButton; // Value injected by FXMLLoader
 
     @FXML // fx:id="b9"
-	private Button b9; // Value injected by FXMLLoader
+	public Button b9; // Value injected by FXMLLoader
 
     @FXML // fx:id="binButton"
-	private Button binButton; // Value injected by FXMLLoader
+	public Button binButton; // Value injected by FXMLLoader
 
     @FXML // fx:id="facButton"
-	private Button facButton; // Value injected by FXMLLoader
+	public Button facButton; // Value injected by FXMLLoader
 
     @FXML // fx:id="divButton"
-	private Button divButton; // Value injected by FXMLLoader
+	public Button divButton; // Value injected by FXMLLoader
+
+    public String operation = "";
+    public int result = 0;
+    // binary ?? TO-DO
+    public RecursiveMath rMath = new RecursiveMath();
+    public IterativeMath iMath = new IterativeMath();
+
 
     @FXML
 	void div(ActionEvent event) {
-
+	operation += " /";
     }
 
     @FXML
 	void mul(ActionEvent event) {
-
+	operation += " *";
     }
 
     @FXML
 	void sub(ActionEvent event) {
-
+	operation += " -";
     }
 
     @FXML
 	void add(ActionEvent event) {
-
+	operation += " +";
     }
 
     @FXML
 	void fac(ActionEvent event) {
-
+	operation += " !";
     }
 
     @FXML
 	void pow(ActionEvent event) {
-
+	operation += " ^";
     }
 
     @FXML
 	void lshift(ActionEvent event) {
-
+	
     }
 
     @FXML
 	void rshift(ActionEvent event) {
 
     }
+
+    @FXML
+	void b0 (ActionEvent event) {
+	operation += " 0";
+    }
+
+    @FXML
+	void b1 (ActionEvent event) {
+	operation += " 1";
+    }
+
+    @FXML
+	void b2 (ActionEvent event) {
+	operation += " 2";
+    }
+
+    @FXML
+	void b3 (ActionEvent event) {
+	operation += " 3";
+    }
+    
+    @FXML
+	void b4 (ActionEvent event) {
+	operation += " 4";
+    }
+
+    @FXML
+	void b5 (ActionEvent event) {
+	operation += " 5";
+    }
+
+    @FXML
+	void b6 (ActionEvent event) {
+	operation += " 6";
+    }
+
+    @FXML
+	void b7 (ActionEvent event) {
+	operation += " 7";
+    }
+
+    @FXML
+	void b8 (ActionEvent event) {
+	operation += " 8";
+    }
+    
+    @FXML
+	void b9 (ActionEvent event) {
+	operation += " 9";
+    }
+
+
+
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
 	void initialize() {
@@ -142,9 +202,5 @@ public class Controller {
         assert facButton != null : "fx:id=\"facButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert divButton != null : "fx:id=\"divButton\" was not injected: check your FXML file 'calc.fxml'.";
 
-    }
+    } // FXML
 }
-
-
-
-
