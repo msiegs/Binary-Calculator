@@ -2,7 +2,7 @@
  * Sample Skeleton for 'calc.fxml' Controller Class
  */
 
-package calc;
+package cs1302.calc;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -82,8 +82,8 @@ public class Controller {
     public String operation = "";
     public int result = 0;
     // binary ?? TO-DO
-    public RecursiveMath rMath = new RecursiveMath();
-    public IterativeMath iMath = new IterativeMath();
+    private RecursiveMath rMath = new RecursiveMath();
+    private IterativeMath iMath = new IterativeMath();
 
 
     @FXML
