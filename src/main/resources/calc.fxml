@@ -7,21 +7,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.canvas.*?>
 
-<GridPane stylesheets="calc.css"
-    id="main-pane"
-    xmlns:fx="http://javafx.com/fxml" 
-    alignment="center"
-    hgap="10" vgap="10">
-
-    <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
-    
-    <Text id="welcome-text" text="Welcome" 
-        GridPane.columnIndex="0" GridPane.rowIndex="0"
-        GridPane.columnSpan="2"/>
- 
-</GridPane>
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox id="main-pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane prefHeight="114.0" prefWidth="600.0" style="-fx-background-color: black;" />
       <Pane prefHeight="94.0" prefWidth="600.0" />
