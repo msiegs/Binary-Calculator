@@ -7,9 +7,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.canvas.*?>
 
-<VBox id="main-pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calc.Controller">
+<VBox id="main-pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs1302.calc.Controller">
    <children>
-      <Pane prefHeight="114.0" prefWidth="600.0" style="-fx-background-color: black;" />
+      <Pane prefHeight="114.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@calc.css" />
       <Pane prefHeight="94.0" prefWidth="600.0" />
       <GridPane alignment="TOP_CENTER" prefHeight="200.0" prefWidth="452.0" style="-fx-background-color: orange;">
         <columnConstraints>
@@ -78,16 +78,36 @@
             </Button>
             <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
-                 old" size="18.0" />
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+	        <Button fx:id="b6" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+              <font>
+                <Font name="System Bold" size="18.0" />
               </font>
             </Button>
-            <Button fx:id="b3" alignment="CENTER" mfont>
-            </Button>
-            <Button fx:id="subButton" alignment="CENTER" mnemonicParsing="false" onMouseClickee="18.0" />
+            <Button fx:id="b3" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+              <font>
+                <Font name="System Bold" size="18.0" />
               </font>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="style="-fx-background-color: yellow;" text="&lt;&lt;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-      </children>
+            <Button fx:id="divButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#div" prefHeight="35.0" prefWidth="34.0" style="-fx-background-color: gray;" text="/" textFill="WHITE" GridPane.columnIndex="3">
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            </Button>
+            <Button fx:id="mulButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#mul" style="-fx-ba8.0" />
+              </font>
+            </Button>
+            <Button fx:id="subButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#sub" prefHeight="35.0" prefWidth="35.0" style="-fx-backgroundt name="System Bold" size="18.0" />
+              </font>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="&nMouseClicked="#lshift" style="-fx-background-color: yellow;" text="&lt;&lt;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Button fx:id="rButton" m         </Button>
+         </children>
          <padding>
            <Insets left="5.0" right="5.0" />
-   
+         </padding>
+      </GridPane>
+   </children>
+</VBox>
