@@ -133,7 +133,7 @@
               </font>
             </Button>
             <Button fx:id="lButton" mnemonicParsing="false" onMouseClicked="#lshift" style="-fx-background-color: yellow;" text="&lt;&lt;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <Button fx:id="rButton" mnemonicParsing="false" onMouseClicked="#rshift" prefHeight="27.0" prefWidth="39.0" style="-fx-background-color: yellow;" text="&gt;&gt;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Button fx:id="rButton" mnemonicParsing="false" onMouseClicked="#rshift" style="-fx-background-color: yellow;" text="&gt;&gt;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
             <Button fx:id="recButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="209.0" style="-fx-background-color: blue;" text="Use Recursion" textFill="WHITE" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="2">
               <font>
                 <Font size="18.0" />
