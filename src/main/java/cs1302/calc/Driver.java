@@ -28,7 +28,9 @@ public class Driver extends Application {
 	} // try
 
         primaryStage.setTitle("CalcFX!");
-	primaryStage.setScene(new Scene(root, 640, 480));
+	primaryStage.setWidth(640);
+	primaryStage.setHeight(400);
+	primaryStage.setScene(new Scene(root, 640, 400));
         primaryStage.show();
 
     } // start
