@@ -92,7 +92,7 @@
                 <Font name="System Bold" size="18.0" />
               </font>
             </Button>
-<Button fx:id="divButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#div" prefHeight="35.0" prefWidth="34.0" style="-fx-background-color: gray;" text="/" textFill="WHITE" GridPane.columnIndex="3">
+	    <Button fx:id="divButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#div" prefHeight="35.0" prefWidth="34.0" style="-fx-background-color: gray;" text="/" textFill="WHITE" GridPane.columnIndex="3">
               <font>
                 <Font name="System Bold" size="18.0" />
               </font>
