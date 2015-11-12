@@ -5,7 +5,7 @@
 package cs1302.calc;
 
 import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
