@@ -11,6 +11,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.control.Label;
 
 public class Controller {
 
@@ -19,6 +22,21 @@ public class Controller {
 
     @FXML // URL location of the FXML file that was given to the FXMLLoader
 	public URL location;
+
+    @FXML
+	public Pane topPane;
+    
+    @FXML
+	public Label opLabel;
+
+    @FXML
+	public Pane midPane;
+
+    @FXML
+	public Pane binPane;
+
+    @FXML
+	public GridPane calcPane;
 
     @FXML // fx:id="mulButton"
 	public Button mulButton; // Value injected by FXMLLoader
@@ -193,7 +211,13 @@ public class Controller {
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
 	void initialize() {
-        assert mulButton != null : "fx:id=\"mulButton\" was not injected: check your FXML file 'calc.fxml'.";
+
+	assert topPane != null : "fx:id=\"topPane\" was not injected: check your FXML file 'calc.fxml'.";
+	assert opLabel != null : "fx:id=\"opLabel\" was not injected: check your FXML file 'calc.fxml'.";
+      	assert midPane != null : "fx:id=\"midPane\" was not injected: check your FXML file 'calc.fxml'.";
+	assert binPane != null : "fx:id=\"binPane\" was not injected: check your FXML file 'calc.fxml'.";
+	assert calcPane != null : "fx:id=\"calcPane\" was not injected: check your FXML file 'calc.fxml'.";
+	assert mulButton != null : "fx:id=\"mulButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert recButton != null : "fx:id=\"recButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert subButton != null : "fx:id=\"subButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert rButton != null : "fx:id=\"rButton\" was not injected: check your FXML file 'calc.fxml'.";

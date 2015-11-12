@@ -27,6 +27,7 @@ public class Driver extends Application {
 	    System.exit(1);
 	} // try
 
+	// FXMLLoader.setController(
         primaryStage.setTitle("CalcFX!");
 	primaryStage.setWidth(640);
 	primaryStage.setHeight(400);
