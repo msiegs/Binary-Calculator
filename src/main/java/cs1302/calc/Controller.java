@@ -84,6 +84,8 @@ public class Controller {
     // binary ?? TO-DO
     private RecursiveMath rMath = new RecursiveMath();
     private IterativeMath iMath = new IterativeMath();
+    private boolean useRecursion = false;
+    private boolean showBinary = true;
 
 
     @FXML
@@ -176,8 +178,17 @@ public class Controller {
 	operation += " 9";
     }
 
-
-
+    @FXML
+	void recButton (ActionEvent event) {
+	if (useRecursion == false) {
+	    useRecursion = true;
+	    // change button to "Use Recursion"
+	}
+	else {
+	    useRecursion = false;
+	    // change button to "Use Iterative"
+	}
+    }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
 	void initialize() {
