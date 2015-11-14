@@ -179,36 +179,43 @@ public class Controller {
     @FXML
 	void b3 (MouseEvent click) {
 	operation += " 3";
+	opLabel.setText(operation);
     }
     
     @FXML
 	void b4 (MouseEvent click) {
 	operation += " 4";
+	opLabel.setText(operation);
     }
 
     @FXML
 	void b5 (MouseEvent click) {
 	operation += " 5";
+	opLabel.setText(operation);
     }
 
     @FXML
 	void b6 (MouseEvent click) {
 	operation += " 6";
+	opLabel.setText(operation);
     }
 
     @FXML
 	void b7 (MouseEvent click) {
 	operation += " 7";
+	opLabel.setText(operation);
     }
 
     @FXML
 	void b8 (MouseEvent click) {
 	operation += " 8";
+	opLabel.setText(operation);
     }
     
     @FXML
 	void b9 (MouseEvent click) {
 	operation += " 9";
+	opLabel.setText(operation);
     }
 
     @FXML
