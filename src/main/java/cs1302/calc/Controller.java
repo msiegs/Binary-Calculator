@@ -117,38 +117,38 @@ public class Controller {
 
     @FXML
 	void div(MouseEvent click) {
-	operation += " /";
+	operation += " / ";
 	opLabel.setText(operation);
     }
 
     @FXML
 	void mul(MouseEvent click) {
-	operation += " *";
+	operation += " * ";
 	opLabel.setText(operation);
     }
 
     @FXML
 	void sub(MouseEvent click) {
-	operation += " -";
+	operation += " - ";
 	opLabel.setText(operation);
     }
 
     @FXML
 	void add(MouseEvent click) {
-	operation += " +";
+	operation += " + ";
 	opLabel.setText(operation);
     }
 
     @FXML
 	void fac(MouseEvent click) {
-	operation += " !";
+	operation += " ! ";
 	opLabel.setText(operation);
     }
 
 
     @FXML
 	void pow(MouseEvent click) {
-	operation += " ^";
+	operation += " ^ ";
 	opLabel.setText(operation);
     }
 
@@ -164,62 +164,62 @@ public class Controller {
 
     @FXML
 	void b0 (MouseEvent click) {
-	operation += " 0";
+	operation += "0";
 	opLabel.setText(operation);
     }
 
     @FXML
 	void b1 (MouseEvent click) {
-	operation += " 1";
+	operation += "1";
 	opLabel.setText(operation);
     }
 
 
     @FXML
 	void b2 (MouseEvent click) {
-	operation += " 2";
+	operation += "2";
 	opLabel.setText(operation);
     }
 
     @FXML
 	void b3 (MouseEvent click) {
-	operation += " 3";
+	operation += "3";
 	opLabel.setText(operation);
     }
     
     @FXML
 	void b4 (MouseEvent click) {
-	operation += " 4";
+	operation += "4";
 	opLabel.setText(operation);
     }
 
     @FXML
 	void b5 (MouseEvent click) {
-	operation += " 5";
+	operation += "5";
 	opLabel.setText(operation);
     }
 
     @FXML
 	void b6 (MouseEvent click) {
-	operation += " 6";
+	operation += "6";
 	opLabel.setText(operation);
     }
 
     @FXML
 	void b7 (MouseEvent click) {
-	operation += " 7";
+	operation += "7";
 	opLabel.setText(operation);
     }
 
     @FXML
 	void b8 (MouseEvent click) {
-	operation += " 8";
+	operation += "8";
 	opLabel.setText(operation);
     }
     
     @FXML
 	void b9 (MouseEvent click) {
-	operation += " 9";
+	operation += "9";
 	opLabel.setText(operation);
     }
 
@@ -237,13 +237,13 @@ public class Controller {
 
     @FXML
 	void binButton (MouseEvent click) {
-	if (showBinary == true) {
-	    showBinary = false;
-	    binButton.setText("Show Binary"); // change button to "Show Binary"
-	}
-	else {
+	if (showBinary != true) {
 	    showBinary = true;
 	    binButton.setText("Hide Binary"); // change button to "Hide Binary"
+	}
+	else {
+	    showBinary = false;
+	    binButton.setText("Show Binary"); // change button to "Show Binary"
 	}
     }
 
