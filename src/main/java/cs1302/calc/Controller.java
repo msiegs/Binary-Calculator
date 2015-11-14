@@ -116,11 +116,6 @@ public class Controller {
     private boolean showBinary = true;
 
     @FXML
-	void binButton(MouseEvent click) {
-
-    }
-
-    @FXML
 	void div(MouseEvent click) {
 	operation += " /";
 	opLabel.setText(operation);
@@ -249,6 +244,8 @@ public class Controller {
 	else {
 	    showBinary = true;
 	    binButton.setText("Hide Binary"); // change button to "Hide Binary"
+	}
+    }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
 	void initialize() {
