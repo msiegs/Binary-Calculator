@@ -100,6 +100,12 @@ public class Controller {
     @FXML // fx:id="divButton"
 	public Button divButton; // Value injected by FXMLLoader
 
+    @FXML
+	public Button deleteButton;
+    
+    @FXML
+	public Button clearButton;
+
     public String operation = "";
     public int result = 0;
     // opLabel.setText(operation);

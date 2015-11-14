@@ -13,7 +13,7 @@
    <children>
       <Pane id="topPane" prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@calc.css">
 	<children>
-	  <Label fx:id="opLabel" alignment="CENTER_RIGHT" layoutX="400.0" layoutY="6.0" prefHeight="47.0" prefWidth="179.0" text="" textFill="#2fff00" >
+	  <Label fx:id="opLabel" alignment="CENTER_RIGHT" layoutX="400.0" layoutY="6.0" prefHeight="47.0" prefWidth="500.0" text="" textFill="#2fff00" >
 	  <font>
             <Font name="Times New Roman Bold" size="36.0" />
         </font></Label>
@@ -37,42 +37,42 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="b4" mnemonicParsing="false" style="-fx-background-color: gray;" text="4" textFill="WHITE" GridPane.rowIndex="1">
+            <Button fx:id="b4" mnemonicParsing="false" style="-fx-background-color: gray;" onMouseClicked="#b4" text="4" textFill="WHITE" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Button>
-            <Button fx:id="b1" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="1" textFill="WHITE" GridPane.rowIndex="2">
+            <Button fx:id="b1" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" onMouseClicked="#b1" text="1" textFill="WHITE" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="b5" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="b5" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" onMouseClicked="#b5" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="b0" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="0" textFill="WHITE" GridPane.rowIndex="3">
+            <Button fx:id="b0" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" onMouseClicked="#b0" text="0" textFill="WHITE" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="b7" mnemonicParsing="false" style="-fx-background-color: gray;" text="7" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="b7" mnemonicParsing="false" style="-fx-background-color: gray;" onMouseClicked="#b7" text="7" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Button>
-            <Button fx:id="b8" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="8" textFill="WHITE" GridPane.columnIndex="1">
+            <Button fx:id="b8" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" onMouseClicked="#b8" text="8" textFill="WHITE" GridPane.columnIndex="1">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="b9" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="9" textFill="WHITE" GridPane.columnIndex="2">
+            <Button fx:id="b9" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" onMouseClicked="#b9" text="9" textFill="WHITE" GridPane.columnIndex="2">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="b2" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="b2" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" onMouseClicked="#b2" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -90,12 +90,12 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-	        <Button fx:id="b6" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+	        <Button fx:id="b6" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" onMouseClicked="#b6" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
               <font>
                 <Font name="System Bold" size="18.0" />
               </font>
             </Button>
-            <Button fx:id="b3" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="b3" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" onMouseClicked="#b3" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
               <font>
                 <Font name="System Bold" size="18.0" />
               </font>
@@ -125,12 +125,12 @@
                 <Font name="System Bold" size="18.0" />
               </font>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="&lt;" textFill="WHITE" GridPane.columnIndex="5">
+            <Button fx:id="deleteButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="&lt;" textFill="WHITE" GridPane.columnIndex="5">
               <font>
                 <Font name="System Bold" size="18.0" />
               </font>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="X" textFill="WHITE" GridPane.columnIndex="6">
+            <Button fx:id="clearButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="X" textFill="WHITE" GridPane.columnIndex="6">
               <font>
                 <Font name="System Bold" size="18.0" />
               </font>
@@ -142,7 +142,7 @@
             </Button>
             <Button fx:id="lButton" mnemonicParsing="false" onMouseClicked="#lshift" style="-fx-background-color: yellow;" text="&lt;&lt;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
             <Button fx:id="rButton" mnemonicParsing="false" onMouseClicked="#rshift" style="-fx-background-color: yellow;" text="&gt;&gt;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <Button fx:id="recButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="209.0" style="-fx-background-color: blue;" text="Use Recursion" textFill="WHITE" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="2">
+            <Button fx:id="recButton" mnemonicParsing="false" onMouseClicked="#recButton" prefHeight="35.0" prefWidth="209.0" style="-fx-background-color: blue;" text="Use Recursion" textFill="WHITE" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="2">
               <font>
                 <Font size="18.0" />
               </font>
