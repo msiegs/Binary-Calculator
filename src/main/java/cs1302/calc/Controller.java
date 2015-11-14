@@ -240,6 +240,16 @@ public class Controller {
 	}
     }
 
+    @FXML
+	void binButton (MouseEvent click) {
+	if (showBinary == true) {
+	    showBinary = false;
+	    binButton.setText("Show Binary"); // change button to "Show Binary"
+	}
+	else {
+	    showBinary = true;
+	    binButton.setText("Hide Binary"); // change button to "Hide Binary"
+
     @FXML // This method is called by the FXMLLoader when initialization is complete
 	void initialize() {
 
