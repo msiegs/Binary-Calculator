@@ -147,7 +147,7 @@
                 <Font size="18.0" />
               </font>
             </Button>
-            <Button fx:id="binButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="209.0" style="-fx-background-color: blue;" text="Use Binary" textFill="WHITE" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="3">
+            <Button fx:id="binButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="209.0" style="-fx-background-color: blue;" text="Hide Binary" textFill="WHITE" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="3">
               <font>
                 <Font size="18.0" />
               </font>
