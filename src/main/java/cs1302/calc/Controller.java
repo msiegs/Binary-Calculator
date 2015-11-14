@@ -125,26 +125,32 @@ public class Controller {
     @FXML
 	void mul(MouseEvent click) {
 	operation += " *";
+	opLabel.setText(operation);
     }
 
     @FXML
 	void sub(MouseEvent click) {
 	operation += " -";
+	opLabel.setText(operation);
     }
 
     @FXML
 	void add(MouseEvent click) {
 	operation += " +";
+	opLabel.setText(operation);
     }
 
     @FXML
 	void fac(MouseEvent click) {
 	operation += " !";
+	opLabel.setText(operation);
     }
+
 
     @FXML
 	void pow(MouseEvent click) {
 	operation += " ^";
+	opLabel.setText(operation);
     }
 
     @FXML
@@ -160,51 +166,62 @@ public class Controller {
     @FXML
 	void b0 (MouseEvent click) {
 	operation += " 0";
+	opLabel.setText(operation);
     }
 
     @FXML
 	void b1 (MouseEvent click) {
 	operation += " 1";
+	opLabel.setText(operation);
     }
+
 
     @FXML
 	void b2 (MouseEvent click) {
 	operation += " 2";
+	opLabel.setText(operation);
     }
 
     @FXML
 	void b3 (MouseEvent click) {
 	operation += " 3";
+	opLabel.setText(operation);
     }
     
     @FXML
 	void b4 (MouseEvent click) {
 	operation += " 4";
+	opLabel.setText(operation);
     }
 
     @FXML
 	void b5 (MouseEvent click) {
 	operation += " 5";
+	opLabel.setText(operation);
     }
 
     @FXML
 	void b6 (MouseEvent click) {
 	operation += " 6";
+	opLabel.setText(operation);
     }
 
     @FXML
 	void b7 (MouseEvent click) {
 	operation += " 7";
+	opLabel.setText(operation);
     }
 
     @FXML
 	void b8 (MouseEvent click) {
 	operation += " 8";
+	opLabel.setText(operation);
     }
     
     @FXML
 	void b9 (MouseEvent click) {
 	operation += " 9";
+	opLabel.setText(operation);
     }
 
     @FXML
