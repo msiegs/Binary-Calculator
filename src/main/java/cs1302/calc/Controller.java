@@ -115,6 +115,10 @@ public class Controller {
     private boolean useRecursion = false;
     private boolean showBinary = true;
 
+    @FXML
+	void binButton(MouseEvent click) {
+
+    }
 
     @FXML
 	void div(MouseEvent click) {
@@ -264,6 +268,8 @@ public class Controller {
         assert binButton != null : "fx:id=\"binButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert facButton != null : "fx:id=\"facButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert divButton != null : "fx:id=\"divButton\" was not injected: check your FXML file 'calc.fxml'.";
+	assert clearButton != null : "fx:id=\"clearButton\" was not injected: check your FXML file 'calc.fxml'.";
+	assert deleteButton != null : "fx:id=\"deleteButton\" was not injected: check your FXML file 'calc.fxml'.";
 	opLabel.setText(operation);
 
     } // FXML
