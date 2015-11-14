@@ -14,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.control.Label;
+import javafx.beans.property.StringProperty;
 
 public class Controller {
 
@@ -98,8 +99,9 @@ public class Controller {
     @FXML // fx:id="divButton"
 	public Button divButton; // Value injected by FXMLLoader
 
-    public String operation = "";
+    public String operation = "soup";
     public int result = 0;
+    // opLabel.setText(operation);
     // binary ?? TO-DO
     private RecursiveMath rMath = new RecursiveMath();
     private IterativeMath iMath = new IterativeMath();
@@ -237,6 +239,7 @@ public class Controller {
         assert binButton != null : "fx:id=\"binButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert facButton != null : "fx:id=\"facButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert divButton != null : "fx:id=\"divButton\" was not injected: check your FXML file 'calc.fxml'.";
+	opLabel.setText(operation);
 
     } // FXML
 }

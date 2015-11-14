@@ -13,9 +13,12 @@
    <children>
       <Pane id="topPane" prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@calc.css">
 	<children>
-	  <Label fx:id="opLabel" layoutX="416.0" layoutY="6.0" prefHeight="47.0" prefWidth="179.0" text="textgoeshere" textFill="#2fff00" />
+	  <Label fx:id="opLabel" alignment="CENTER_RIGHT" layoutX="400.0" layoutY="6.0" prefHeight="47.0" prefWidth="179.0" text="" textFill="#2fff00" >
+	    <font>
+	      <Font name="Times New Roman Bold" size="36.0" />
+	      </font></Label>
          </children></Pane>
-      <Pane id="midPane" prefHeight="60.0" prefWidth="600.0" />
+      <Pane id="midPane" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: black;"/>
       <Pane id="binPane" prefHeight="84.0" prefWidth="600.0" />
       <GridPane id="calcPane" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="452.0" style="-fx-background-color: orange;">
         <columnConstraints>
