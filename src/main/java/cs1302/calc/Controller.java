@@ -6,6 +6,7 @@ package cs1302.calc;
 
 import java.awt.event.ActionListener;
 import javafx.event.ActionEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.event.EventHandler;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -99,7 +100,7 @@ public class Controller {
     @FXML // fx:id="divButton"
 	public Button divButton; // Value injected by FXMLLoader
 
-    public String operation = "soup";
+    public String operation = "";
     public int result = 0;
     // opLabel.setText(operation);
     // binary ?? TO-DO
@@ -110,97 +111,98 @@ public class Controller {
 
 
     @FXML
-	void div(ActionEvent event) {
+	void div(MouseEvent click) {
 	operation += " /";
+	opLabel.setText(operation);
     }
 
     @FXML
-	void mul(ActionEvent event) {
+	void mul(MouseEvent click) {
 	operation += " *";
     }
 
     @FXML
-	void sub(ActionEvent event) {
+	void sub(MouseEvent click) {
 	operation += " -";
     }
 
     @FXML
-	void add(ActionEvent event) {
+	void add(MouseEvent click) {
 	operation += " +";
     }
 
     @FXML
-	void fac(ActionEvent event) {
+	void fac(MouseEvent click) {
 	operation += " !";
     }
 
     @FXML
-	void pow(ActionEvent event) {
+	void pow(MouseEvent click) {
 	operation += " ^";
     }
 
     @FXML
-	void lshift(ActionEvent event) {
+	void lshift(MouseEvent click) {
 	
     }
 
     @FXML
-	void rshift(ActionEvent event) {
+	void rshift(MouseEvent click) {
 
     }
 
     @FXML
-	void b0 (ActionEvent event) {
+	void b0 (MouseEvent click) {
 	operation += " 0";
     }
 
     @FXML
-	void b1 (ActionEvent event) {
+	void b1 (MouseEvent click) {
 	operation += " 1";
     }
 
     @FXML
-	void b2 (ActionEvent event) {
+	void b2 (MouseEvent click) {
 	operation += " 2";
     }
 
     @FXML
-	void b3 (ActionEvent event) {
+	void b3 (MouseEvent click) {
 	operation += " 3";
     }
     
     @FXML
-	void b4 (ActionEvent event) {
+	void b4 (MouseEvent click) {
 	operation += " 4";
     }
 
     @FXML
-	void b5 (ActionEvent event) {
+	void b5 (MouseEvent click) {
 	operation += " 5";
     }
 
     @FXML
-	void b6 (ActionEvent event) {
+	void b6 (MouseEvent click) {
 	operation += " 6";
     }
 
     @FXML
-	void b7 (ActionEvent event) {
+	void b7 (MouseEvent click) {
 	operation += " 7";
     }
 
     @FXML
-	void b8 (ActionEvent event) {
+	void b8 (MouseEvent click) {
 	operation += " 8";
     }
     
     @FXML
-	void b9 (ActionEvent event) {
+	void b9 (MouseEvent click) {
 	operation += " 9";
     }
 
     @FXML
-	void recButton (ActionEvent event) {
+	void recButton (MouseEvent click) {
 	if (useRecursion == false) {
 	    useRecursion = true;
 	    // change button to "Use Recursion"
