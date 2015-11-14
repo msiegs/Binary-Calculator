@@ -222,11 +222,11 @@ public class Controller {
 	void recButton (MouseEvent click) {
 	if (useRecursion == false) {
 	    useRecursion = true;
-	    // change button to "Use Recursion"
+	    recButton.setText("Use Iteration");// change button to "Use Recursion"
 	}
 	else {
 	    useRecursion = false;
-	    // change button to "Use Iterative"
+	    recButton.setText("Use Recursion");//change button to "Use Iterative"
 	}
     }
 
