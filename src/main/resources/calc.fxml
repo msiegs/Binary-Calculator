@@ -9,18 +9,28 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
 
-<VBox id="main-pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs1302.calc.Controller">
+<VBox id="main-pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns="http://javafx.com/javafx/8" fx:controller="cs1302.calc.Controller">
    <children>
-      <Pane id="topPane" prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@calc.css">
+      <Pane fx:id="topPane" prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@calc.css">
 	<children>
-	  <Label fx:id="opLabel" alignment="CENTER_RIGHT" layoutX="7.0" layoutY="5.0" prefHeight="47.0" prefWidth="550.0" text="" textFill="#2fff00" >
-	  <font>
-            <Font name="Times New Roman Bold" size="36.0" />
-        </font></Label>
-         </children></Pane>
-      <Pane id="midPane" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: black;"/>
-      <Pane id="binPane" prefHeight="84.0" prefWidth="600.0" />
-      <GridPane id="calcPane" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="452.0" style="-fx-background-color: orange;">
+	  <Label fx:id="opLabel" alignment="CENTER_RIGHT" layoutX="7.0" layoutY="5.0" prefHeight="47.0" prefWidth="550.0" text="" textFill="#2fff00">
+	    <font>
+              <Font size="36.0" />
+          </font></Label>
+      </children></Pane>
+      <Pane fx:id="midPane" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: black;">
+	<opaqueInsets>
+	  <Insets />
+	</opaqueInsets>
+	<children>
+	  <Label fx:id="resultLabel" alignment="CENTER_RIGHT" layoutX="18.0" layoutY="3.0" prefHeight="47.0" prefWidth="550.0" text="" textFill="WHITE">
+	    <font>
+	      <Font size="36.0" />
+	    </font>
+	  </Label>
+      </children></Pane>
+      <Pane fx:id="binPane" prefHeight="84.0" prefWidth="600.0" />
+      <GridPane fx:id="calcPane" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="452.0" style="-fx-background-color: orange;">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
