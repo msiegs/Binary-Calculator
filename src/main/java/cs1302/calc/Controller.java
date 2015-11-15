@@ -108,41 +108,55 @@ public class Controller {
 
     public String operation = "";
     public int result = 0;
+    public int lhs = 0;
+    public int rhs = 0;
     // opLabel.setText(operation);
     // binary ?? TO-DO
     private RecursiveMath rMath = new RecursiveMath();
     private IterativeMath iMath = new IterativeMath();
     private boolean useRecursion = false;
     private boolean showBinary = true;
+    private boolean useDiv = false;
+    private boolean useMul = false;
+    private boolean useAdd = false;
+    private boolean useSub = false;
+    private boolean usePow = false;
+    private boolean useFac = false;
+
 
     @FXML
 	void div(MouseEvent click) {
 	operation += " / ";
 	opLabel.setText(operation);
+	useDiv = true;
     }
 
     @FXML
 	void mul(MouseEvent click) {
 	operation += " * ";
 	opLabel.setText(operation);
+	useMul = true;
     }
 
     @FXML
 	void sub(MouseEvent click) {
 	operation += " - ";
 	opLabel.setText(operation);
+	useSub = true;
     }
 
     @FXML
 	void add(MouseEvent click) {
 	operation += " + ";
 	opLabel.setText(operation);
+	useAdd = true;
     }
 
     @FXML
 	void fac(MouseEvent click) {
 	operation += " ! ";
 	opLabel.setText(operation);
+	useFac = true;
     }
 
 
@@ -150,6 +164,7 @@ public class Controller {
 	void pow(MouseEvent click) {
 	operation += " ^ ";
 	opLabel.setText(operation);
+	usePow = true;
     }
 
     @FXML
