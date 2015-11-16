@@ -109,12 +109,14 @@ public class Controller {
     @FXML
 	public Button clearButton;
 
+    @FXML
+	public Button equalButton;
+
     public String operation = "";
     public int result = 0;
     public int lhs = 0;
     public int rhs = 0;
     public int numPushed;
-    // opLabel.setText(operation);
     // binary ?? TO-DO
     private RecursiveMath rMath = new RecursiveMath();
     private IterativeMath iMath = new IterativeMath();
@@ -129,7 +131,7 @@ public class Controller {
 
 
     @FXML
-	void div(MouseEvent click) {
+	void divButton(MouseEvent click) {
 	lhs = Integer.parseInt(operation);
 	operation += " / ";
 	opLabel.setText(operation);
@@ -137,28 +139,28 @@ public class Controller {
     }
 
     @FXML
-	void mul(MouseEvent click) {
+	void mulButton(MouseEvent click) {
 	operation += " * ";
 	opLabel.setText(operation);
 	useMul = true;
     }
 
     @FXML
-	void sub(MouseEvent click) {
+	void subButton(MouseEvent click) {
 	operation += " - ";
 	opLabel.setText(operation);
 	useSub = true;
     }
 
     @FXML
-	void add(MouseEvent click) {
+	void addButton(MouseEvent click) {
 	operation += " + ";
 	opLabel.setText(operation);
 	useAdd = true;
     }
 
     @FXML
-	void fac(MouseEvent click) {
+	void facButton(MouseEvent click) {
 	operation += " ! ";
 	opLabel.setText(operation);
 	useFac = true;
@@ -166,19 +168,19 @@ public class Controller {
 
 
     @FXML
-	void pow(MouseEvent click) {
+	void powButton(MouseEvent click) {
 	operation += " ^ ";
 	opLabel.setText(operation);
 	usePow = true;
     }
 
     @FXML
-	void lshift(MouseEvent click) {
+	void lButton(MouseEvent click) {
 	
     }
 
     @FXML
-	void rshift(MouseEvent click) {
+	void rButton(MouseEvent click) {
 
     }
 
@@ -262,6 +264,10 @@ public class Controller {
 	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
+    @FXML
+	void equalButton (MouseEvent click) {
+	//
+    }
 
     @FXML
 	void recButton (MouseEvent click) {
@@ -287,6 +293,16 @@ public class Controller {
 	}
     }
 
+    @FXML
+	void deleteButton (MouseEvent click) {
+	//
+    }
+
+    @FXML
+	void clearButton (MouseEvent click) {
+	//
+    }
+
     @FXML // This method is called by the FXMLLoader when initialization is complete
 	void initialize() {
 
@@ -308,8 +324,8 @@ public class Controller {
         assert b4 != null : "fx:id=\"b4\" was not injected: check your FXML file 'calc.fxml'.";
         assert b5 != null : "fx:id=\"b5\" was not injected: check your FXML file 'calc.fxml'.";
         assert b6 != null : "fx:id=\"b6\" was not injected: check your FXML file 'calc.fxml'.";
-        assert b7 != null : "fx:id=\"b7\" was not injected: check your FXML file 'calc.fxml'.";
-        assert powButton != null : "fx:id=\"powButton\" was not injected: check your FXML file 'calc.fxml'.";
+        assert b7 != null : "fx:id=\"b7\" was not injected: check your FXML file 'calc.fxml'."; 
+	assert powButton != null : "fx:id=\"powButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert b8 != null : "fx:id=\"b8\" was not injected: check your FXML file 'calc.fxml'.";
         assert lButton != null : "fx:id=\"lButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert b9 != null : "fx:id=\"b9\" was not injected: check your FXML file 'calc.fxml'.";
@@ -318,8 +334,8 @@ public class Controller {
         assert divButton != null : "fx:id=\"divButton\" was not injected: check your FXML file 'calc.fxml'.";
 	assert clearButton != null : "fx:id=\"clearButton\" was not injected: check your FXML file 'calc.fxml'.";
 	assert deleteButton != null : "fx:id=\"deleteButton\" was not injected: check your FXML file 'calc.fxml'.";
+	assert equalButton != null : "fx:id=\"equalButton\" was not injected: check your FXML file 'calc.fxml'.";
 	opLabel.setText(operation);
-	resultLabel.setText(Integer.toString(result));
 
     } // FXML
 
@@ -361,7 +377,7 @@ public class Controller {
 	    if (useRecursion == true) result = rMath.fac(lhs);
 	    else result = iMath.fac(lhs);
 	} // useFac
-	resultLabel.setText(Integer.toString(result));
+	resultLabel.setText(String.valueOf(result));
 	lhs = result;
     } // useNumbers
 		
