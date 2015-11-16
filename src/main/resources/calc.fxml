@@ -139,12 +139,12 @@
                 <Font name="System Bold" size="18.0" />
               </font>
             </Button>
-            <Button fx:id="clearButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" text="X" textFill="WHITE" GridPane.columnIndex="6">
+            <Button fx:id="clearButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: gray;" onMouseClicked="#clearButton" text="X" textFill="WHITE" GridPane.columnIndex="6">
               <font>
                 <Font name="System Bold" size="18.0" />
               </font>
             </Button>
-            <Button fx:id="powButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#pow" style="-fx-background-color: gray;" text="^" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <Button fx:id="powButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#powButton" style="-fx-background-color: gray;" text="^" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="1">
               <font>
                 <Font name="System Bold" size="18.0" />
               </font>

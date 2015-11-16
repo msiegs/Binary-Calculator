@@ -15,14 +15,9 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.control.Label;
+import javafx.fxml.Initializable;
 
-public class Controller {
-
-    @FXML // ResourceBundle that was given to the FXMLLoader
-	public ResourceBundle resources;
-
-    @FXML // URL location of the FXML file that was given to the FXMLLoader
-	public URL location;
+public class Controller implements Initializable {
 
     @FXML
 	public Pane topPane;
@@ -122,35 +117,30 @@ public class Controller {
 	void divButton(MouseEvent click) {
 	operation += " / ";
 	opLabel.setText(operation);
-	useDiv = true;
     }
 
     @FXML
 	void mulButton(MouseEvent click) {
 	operation += " * ";
 	opLabel.setText(operation);
-	useMul = true;
     }
 
     @FXML
 	void subButton(MouseEvent click) {
 	operation += " - ";
 	opLabel.setText(operation);
-	useSub = true;
     }
 
     @FXML
 	void addButton(MouseEvent click) {
 	operation += " + ";
 	opLabel.setText(operation);
-	useAdd = true;
     }
 
     @FXML
 	void facButton(MouseEvent click) {
 	operation += " ! ";
 	opLabel.setText(operation);
-	useFac = true;
     }
 
 
@@ -158,7 +148,6 @@ public class Controller {
 	void powButton(MouseEvent click) {
 	operation += " ^ ";
 	opLabel.setText(operation);
-	usePow = true;
     }
 
     @FXML
@@ -274,8 +263,7 @@ public class Controller {
 	opLabel.setText(operation);
     }
 
-    @FXML // This method is called by the FXMLLoader when initialization is complete
-	void initialize() {
+    public void initialize(URL location, ResourceBundle resources) {
 
 	assert topPane != null : "fx:id=\"topPane\" was not injected: check your FXML file 'calc.fxml'.";
 	assert opLabel != null : "fx:id=\"opLabel\" was not injected: check your FXML file 'calc.fxml'.";
