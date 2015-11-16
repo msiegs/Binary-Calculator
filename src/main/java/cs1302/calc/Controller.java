@@ -1,4 +1,4 @@
-/**x
+/*
  * Sample Skeleton for 'calc.fxml' Controller Class
  */
 
@@ -15,7 +15,6 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.control.Label;
-import javafx.beans.property.StringProperty;
 
 public class Controller {
 
@@ -114,25 +113,13 @@ public class Controller {
 
     public String operation = "";
     public int result = 0;
-    public int lhs = 0;
-    public int rhs = 0;
-    public int numPushed;
-    // binary ?? TO-DO
     private RecursiveMath rMath = new RecursiveMath();
     private IterativeMath iMath = new IterativeMath();
     private boolean useRecursion = false;
     private boolean showBinary = true;
-    private boolean useDiv = false;
-    private boolean useMul = false;
-    private boolean useAdd = false;
-    private boolean useSub = false;
-    private boolean usePow = false;
-    private boolean useFac = false;
-
 
     @FXML
 	void divButton(MouseEvent click) {
-	lhs = Integer.parseInt(operation);
 	operation += " / ";
 	opLabel.setText(operation);
 	useDiv = true;
@@ -187,16 +174,12 @@ public class Controller {
     @FXML
 	void b0 (MouseEvent click) {
 	operation += "0";
-	numPushed = 0;
-	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
     @FXML
 	void b1 (MouseEvent click) {
 	operation += "1";
-	numPushed = 1;
-	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
@@ -204,69 +187,56 @@ public class Controller {
     @FXML
 	void b2 (MouseEvent click) {
 	operation += "2";
-	numPushed = 2;
-	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
     @FXML
 	void b3 (MouseEvent click) {
 	operation += "3";
-	numPushed = 3;
-	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
     
     @FXML
 	void b4 (MouseEvent click) {
 	operation += "4";
-	numPushed = 4;
-	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
     @FXML
 	void b5 (MouseEvent click) {
 	operation += "5";
-	numPushed = 5;
-	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
     @FXML
 	void b6 (MouseEvent click) {
 	operation += "6";
-	numPushed = 6;
-	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
     @FXML
 	void b7 (MouseEvent click) {
 	operation += "7";
-	numPushed = 7;
-	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
     @FXML
 	void b8 (MouseEvent click) {
 	operation += "8";
-	numPushed = 8;
-	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
     
     @FXML
 	void b9 (MouseEvent click) {
 	operation += "9";
-	numPushed = 9;
-	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
     @FXML
 	void equalButton (MouseEvent click) {
-	//
+	String infix[] = operation.split(" ");
+	String postfix[] = ReversePolishNotation.infixToPostfix(infix);
+	if (useRecursion == true) result = ReversePolishNotation.evaluate(rMath, postfix);
+	else result = ReversePolishNotation.evaluate(iMath, postfix);
     }
 
     @FXML
@@ -300,7 +270,8 @@ public class Controller {
 
     @FXML
 	void clearButton (MouseEvent click) {
-	//
+	operation = "";
+	opLabel.setText(operation);
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
@@ -337,50 +308,7 @@ public class Controller {
 	assert equalButton != null : "fx:id=\"equalButton\" was not injected: check your FXML file 'calc.fxml'.";
 	opLabel.setText(operation);
 
-    } // FXML
-
-    // This method is used to determine whether a number will be saved as "lhs" or whether it will be used as rhs and call on an operation.
-    public void useNumbers(int numPushed) {
-	if (useAdd == true) {
-	    useAdd = false;
-	    rhs = numPushed;
-	    if (useRecursion == true) result = rMath.add(lhs, rhs);
-	    else result = iMath.add(lhs, rhs);
-	} // useAdd
-	else if (useSub == true) {
-	    useSub = false;
-	    rhs = numPushed;
-	    if (useRecursion == true) result = rMath.sub(lhs, rhs);
-	    else result = iMath.sub(lhs, rhs);
-	} // useSub
-	else if (useMul == true) {
-	    useMul = false;
-	    rhs = numPushed;
-	    if (useRecursion == true) result = rMath.mul(lhs, rhs);
-	    else result = iMath.mul(lhs, rhs);
-	} // useMul
-	else if (useDiv == true) {
-	    useDiv = false;
-	    rhs = numPushed;
-	    if (useRecursion == true) result = rMath.div(lhs, rhs);
-	    else result = iMath.div(lhs, rhs);
-	} // useDiv
-	else if (usePow == true) {
-	    usePow = false;
-	    rhs = numPushed;
-	    if (useRecursion == true) result = rMath.pow(lhs, rhs);
-	    else result = iMath.pow(lhs, rhs);
-	} // usePow
-	else if (useFac == true) {
-	    useFac = false;
-	    rhs = numPushed;
-	    if (useRecursion == true) result = rMath.fac(lhs);
-	    else result = iMath.fac(lhs);
-	} // useFac
-	resultLabel.setText(String.valueOf(result));
-	lhs = result;
-    } // useNumbers
-		
+    } // FXML initialize()
 
 }
 
