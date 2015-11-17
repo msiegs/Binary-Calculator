@@ -21,6 +21,7 @@ public class Driver extends Application {
 	Parent root = null;
 
 	try {
+	    System.out.println("test");
 	    root = FXMLLoader.load(getClass().getResource("/calc.fxml"));
 	} catch (IOException e) {
 	    System.out.println(e);
@@ -29,8 +30,6 @@ public class Driver extends Application {
 
 	// FXMLLoader.setController(
         primaryStage.setTitle("CalcFX!");
-	primaryStage.setWidth(640);
-	primaryStage.setHeight(400);
 	primaryStage.setScene(new Scene(root, 640, 400));
         primaryStage.show();
 

@@ -4,7 +4,6 @@
 
 package cs1302.calc;
 
-import java.awt.event.ActionListener;
 import javafx.event.ActionEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.event.EventHandler;
@@ -106,6 +105,7 @@ public class Controller implements Initializable {
     @FXML
 	public Button equalButton;
 
+
     public String operation = "";
     public int result = 0;
     private RecursiveMath rMath = new RecursiveMath();
@@ -114,122 +114,127 @@ public class Controller implements Initializable {
     private boolean showBinary = true;
 
     @FXML
-	void divButton(MouseEvent click) {
+	void div(MouseEvent click) {
 	operation += " / ";
 	opLabel.setText(operation);
     }
 
     @FXML
-	void mulButton(MouseEvent click) {
+	void mul(MouseEvent click) {
 	operation += " * ";
 	opLabel.setText(operation);
     }
 
     @FXML
-	void subButton(MouseEvent click) {
+	void sub(MouseEvent click) {
 	operation += " - ";
 	opLabel.setText(operation);
     }
 
     @FXML
-	void addButton(MouseEvent click) {
+	void add(MouseEvent click) {
 	operation += " + ";
 	opLabel.setText(operation);
     }
 
     @FXML
-	void facButton(MouseEvent click) {
+	void fac(MouseEvent click) {
 	operation += " ! ";
 	opLabel.setText(operation);
     }
 
 
     @FXML
-	void powButton(MouseEvent click) {
+	void pow(MouseEvent click) {
 	operation += " ^ ";
 	opLabel.setText(operation);
     }
 
     @FXML
-	void lButton(MouseEvent click) {
-	
+	void lShift(MouseEvent click) {
+	System.out.println("lButton pushed!");
+	// !!!
     }
 
     @FXML
-	void rButton(MouseEvent click) {
-
+	void rShift(MouseEvent click) {
+	System.out.println("rButton pushed!");
+	// !!!
     }
 
     @FXML
-	void b0 (MouseEvent click) {
+	void b0Pressed (MouseEvent click) {
 	operation += "0";
 	opLabel.setText(operation);
     }
 
     @FXML
-	void b1 (MouseEvent click) {
+	void b1Pressed (MouseEvent click) {
 	operation += "1";
 	opLabel.setText(operation);
     }
 
 
     @FXML
-	void b2 (MouseEvent click) {
+	void b2Pressed (MouseEvent click) {
 	operation += "2";
 	opLabel.setText(operation);
     }
 
     @FXML
-	void b3 (MouseEvent click) {
+	void b3Pressed (MouseEvent click) {
 	operation += "3";
 	opLabel.setText(operation);
     }
     
     @FXML
-	void b4 (MouseEvent click) {
+	void b4Pressed (MouseEvent click) {
 	operation += "4";
 	opLabel.setText(operation);
     }
 
     @FXML
-	void b5 (MouseEvent click) {
+	void b5Pressed (MouseEvent click) {
 	operation += "5";
 	opLabel.setText(operation);
     }
 
     @FXML
-	void b6 (MouseEvent click) {
+	void b6Pressed (MouseEvent click) {
 	operation += "6";
 	opLabel.setText(operation);
     }
 
     @FXML
-	void b7 (MouseEvent click) {
+	void b7Pressed (MouseEvent click) {
 	operation += "7";
 	opLabel.setText(operation);
     }
 
     @FXML
-	void b8 (MouseEvent click) {
+	void b8Pressed (MouseEvent click) {
 	operation += "8";
 	opLabel.setText(operation);
     }
     
     @FXML
-	void b9 (MouseEvent click) {
+	void b9Pressed (MouseEvent click) {
 	operation += "9";
 	opLabel.setText(operation);
     }
+
     @FXML
-	void equalButton (MouseEvent click) {
+	void equals (MouseEvent click) {
 	String infix[] = operation.split(" ");
 	String postfix[] = ReversePolishNotation.infixToPostfix(infix);
 	if (useRecursion == true) result = ReversePolishNotation.evaluate(rMath, postfix);
-	else result = ReversePolishNotation.evaluate(iMath, postfix);
+	else {
+	    result = ReversePolishNotation.evaluate(iMath, postfix);
+	}
     }
 
     @FXML
-	void recButton (MouseEvent click) {
+	void recursion (MouseEvent click) {
 	if (useRecursion == false) {
 	    useRecursion = true;
 	    recButton.setText("Use Iteration");// change button to "Use Recursion"
@@ -241,7 +246,7 @@ public class Controller implements Initializable {
     }
 
     @FXML
-	void binButton (MouseEvent click) {
+	void binary (MouseEvent click) {
 	if (showBinary != true) {
 	    showBinary = true;
 	    binButton.setText("Hide Binary"); // change button to "Hide Binary"
@@ -253,25 +258,26 @@ public class Controller implements Initializable {
     }
 
     @FXML
-	void deleteButton (MouseEvent click) {
-	//
+	void delete (MouseEvent click) {
+	System.out.println("deleteButton was pressed!");
+	// !!!
     }
 
     @FXML
-	void clearButton (MouseEvent click) {
+	void clear (MouseEvent click) {
 	operation = "";
 	opLabel.setText(operation);
     }
 
     public void initialize(URL location, ResourceBundle resources) {
 
-	assert topPane != null : "fx:id=\"topPane\" was not injected: check your FXML file 'calc.fxml'.";
-	assert opLabel != null : "fx:id=\"opLabel\" was not injected: check your FXML file 'calc.fxml'.";
-      	assert midPane != null : "fx:id=\"midPane\" was not injected: check your FXML file 'calc.fxml'.";
-	assert resultLabel != null : "fx:id=\"resultLabel\" was not injected: check your FXML file 'calc.fxml'.";
-	assert binPane != null : "fx:id=\"binPane\" was not injected: check your FXML file 'calc.fxml'.";
-	assert calcPane != null : "fx:id=\"calcPane\" was not injected: check your FXML file 'calc.fxml'.";
-	assert mulButton != null : "fx:id=\"mulButton\" was not injected: check your FXML file 'calc.fxml'.";
+        assert topPane != null : "fx:id=\"topPane\" was not injected: check your FXML file 'calc.fxml'.";
+        assert opLabel != null : "fx:id=\"opLabel\" was not injected: check your FXML file 'calc.fxml'.";
+        assert midPane != null : "fx:id=\"midPane\" was not injected: check your FXML file 'calc.fxml'.";
+        assert resultLabel != null : "fx:id=\"resultLabel\" was not injected: check your FXML file 'calc.fxml'.";
+        assert binPane != null : "fx:id=\"binPane\" was not injected: check your FXML file 'calc.fxml'.";
+        assert calcPane != null : "fx:id=\"calcPane\" was not injected: check your FXML file 'calc.fxml'.";
+        assert mulButton != null : "fx:id=\"mulButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert recButton != null : "fx:id=\"recButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert subButton != null : "fx:id=\"subButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert rButton != null : "fx:id=\"rButton\" was not injected: check your FXML file 'calc.fxml'.";
@@ -283,18 +289,18 @@ public class Controller implements Initializable {
         assert b4 != null : "fx:id=\"b4\" was not injected: check your FXML file 'calc.fxml'.";
         assert b5 != null : "fx:id=\"b5\" was not injected: check your FXML file 'calc.fxml'.";
         assert b6 != null : "fx:id=\"b6\" was not injected: check your FXML file 'calc.fxml'.";
-        assert b7 != null : "fx:id=\"b7\" was not injected: check your FXML file 'calc.fxml'."; 
-	assert powButton != null : "fx:id=\"powButton\" was not injected: check your FXML file 'calc.fxml'.";
+        assert b7 != null : "fx:id=\"b7\" was not injected: check your FXML file 'calc.fxml'.";
+        assert powButton != null : "fx:id=\"powButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert b8 != null : "fx:id=\"b8\" was not injected: check your FXML file 'calc.fxml'.";
         assert lButton != null : "fx:id=\"lButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert b9 != null : "fx:id=\"b9\" was not injected: check your FXML file 'calc.fxml'.";
         assert binButton != null : "fx:id=\"binButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert facButton != null : "fx:id=\"facButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert divButton != null : "fx:id=\"divButton\" was not injected: check your FXML file 'calc.fxml'.";
-	assert clearButton != null : "fx:id=\"clearButton\" was not injected: check your FXML file 'calc.fxml'.";
-	assert deleteButton != null : "fx:id=\"deleteButton\" was not injected: check your FXML file 'calc.fxml'.";
-	assert equalButton != null : "fx:id=\"equalButton\" was not injected: check your FXML file 'calc.fxml'.";
-	opLabel.setText(operation);
+        assert clearButton != null : "fx:id=\"clearButton\" was not injected: check your FXML file 'calc.fxml'.";
+        assert deleteButton != null : "fx:id=\"deleteButton\" was not injected: check your FXML file 'calc.fxml'.";
+        assert equalButton != null : "fx:id=\"equalButton\" was not injected: check your FXML file 'calc.fxml'.";
+	// opLabel.setText(operation);
 
     } // FXML initialize()
 
