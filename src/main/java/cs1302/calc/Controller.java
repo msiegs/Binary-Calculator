@@ -215,13 +215,9 @@ public class Controller {
 	else {
 	    result = ReversePolishNotation.evaluate(iMath, postfix);
 	}
-<<<<<<< HEAD
-	
 	Integer resultObj = new Integer(result);
 	binResult = resultObj.toBinaryString(resultObj);	
-=======
 	resultLabel.setText(result);
->>>>>>> driving
     }
 
     @FXML
