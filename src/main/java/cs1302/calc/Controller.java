@@ -19,6 +19,9 @@ public class Controller {
     @FXML
 	public Label operationLabel;
 
+    @FXML
+	public Label resultLabel;
+
     @FXML // fx:id="mulButton"
 	public Button mulButton; // Value injected by FXMLLoader
 
@@ -212,9 +215,13 @@ public class Controller {
 	else {
 	    result = ReversePolishNotation.evaluate(iMath, postfix);
 	}
+<<<<<<< HEAD
 	
 	Integer resultObj = new Integer(result);
 	binResult = resultObj.toBinaryString(resultObj);	
+=======
+	resultLabel.setText(result);
+>>>>>>> driving
     }
 
     @FXML
