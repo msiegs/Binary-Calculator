@@ -118,7 +118,7 @@ public class Controller {
     // binary ?? TO-DO
     private RecursiveMath rMath = new RecursiveMath();
     private IterativeMath iMath = new IterativeMath();
-    private boolean useRecursion = false;
+/*  private boolean useRecursion = false;
     private boolean showBinary = true;
     private boolean useDiv = false;
     private boolean useMul = false;
@@ -126,42 +126,42 @@ public class Controller {
     private boolean useSub = false;
     private boolean usePow = false;
     private boolean useFac = false;
-
+*/
 
     @FXML
 	void div(MouseEvent click) {
 	lhs = Integer.parseInt(operation);
 	operation += " / ";
 	opLabel.setText(operation);
-	useDiv = true;
+	//useDiv = true;
     }
 
     @FXML
 	void mul(MouseEvent click) {
 	operation += " * ";
 	opLabel.setText(operation);
-	useMul = true;
+	//useMul = true;
     }
 
     @FXML
 	void sub(MouseEvent click) {
 	operation += " - ";
 	opLabel.setText(operation);
-	useSub = true;
+	//useSub = true;
     }
 
     @FXML
 	void add(MouseEvent click) {
 	operation += " + ";
 	opLabel.setText(operation);
-	useAdd = true;
+	//useAdd = true;
     }
 
     @FXML
 	void fac(MouseEvent click) {
 	operation += " ! ";
 	opLabel.setText(operation);
-	useFac = true;
+	//useFac = true;
     }
 
 
@@ -169,7 +169,7 @@ public class Controller {
 	void pow(MouseEvent click) {
 	operation += " ^ ";
 	opLabel.setText(operation);
-	usePow = true;
+	//usePow = true;
     }
 
     @FXML
@@ -186,7 +186,7 @@ public class Controller {
 	void b0 (MouseEvent click) {
 	operation += "0";
 	numPushed = 0;
-	useNumbers(numPushed);
+	//useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
@@ -194,7 +194,7 @@ public class Controller {
 	void b1 (MouseEvent click) {
 	operation += "1";
 	numPushed = 1;
-	useNumbers(numPushed);
+	//useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
@@ -203,7 +203,7 @@ public class Controller {
 	void b2 (MouseEvent click) {
 	operation += "2";
 	numPushed = 2;
-	useNumbers(numPushed);
+	//useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
@@ -211,7 +211,7 @@ public class Controller {
 	void b3 (MouseEvent click) {
 	operation += "3";
 	numPushed = 3;
-	useNumbers(numPushed);
+	//useNumbers(numPushed);
 	opLabel.setText(operation);
     }
     
@@ -219,7 +219,7 @@ public class Controller {
 	void b4 (MouseEvent click) {
 	operation += "4";
 	numPushed = 4;
-	useNumbers(numPushed);
+//	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
@@ -227,7 +227,7 @@ public class Controller {
 	void b5 (MouseEvent click) {
 	operation += "5";
 	numPushed = 5;
-	useNumbers(numPushed);
+//	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
@@ -235,7 +235,7 @@ public class Controller {
 	void b6 (MouseEvent click) {
 	operation += "6";
 	numPushed = 6;
-	useNumbers(numPushed);
+//	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
@@ -243,7 +243,7 @@ public class Controller {
 	void b7 (MouseEvent click) {
 	operation += "7";
 	numPushed = 7;
-	useNumbers(numPushed);
+//	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
@@ -251,7 +251,7 @@ public class Controller {
 	void b8 (MouseEvent click) {
 	operation += "8";
 	numPushed = 8;
-	useNumbers(numPushed);
+//	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
     
@@ -259,7 +259,7 @@ public class Controller {
 	void b9 (MouseEvent click) {
 	operation += "9";
 	numPushed = 9;
-	useNumbers(numPushed);
+//	useNumbers(numPushed);
 	opLabel.setText(operation);
     }
 
@@ -290,7 +290,10 @@ public class Controller {
     @FXML // This method is called by the FXMLLoader when initialization is complete
 	void initialize() {
 
-	assert topPane != null : "fx:id=\"topPane\" was not injected: check your FXML file 'calc.fxml'.";
+
+
+
+
 	assert opLabel != null : "fx:id=\"opLabel\" was not injected: check your FXML file 'calc.fxml'.";
       	assert midPane != null : "fx:id=\"midPane\" was not injected: check your FXML file 'calc.fxml'.";
 	assert resultLabel != null : "fx:id=\"resultLabel\" was not injected: check your FXML file 'calc.fxml'.";
@@ -324,7 +327,7 @@ public class Controller {
     } // FXML
 
     // This method is used to determine whether a number will be saved as "lhs" or whether it will be used as rhs and call on an operation.
-    public void useNumbers(int numPushed) {
+/*    public void useNumbers(int numPushed) {
 	if (useAdd == true) {
 	    useAdd = false;
 	    rhs = numPushed;
@@ -363,8 +366,7 @@ public class Controller {
 	} // useFac
 	resultLabel.setText(Integer.toString(result));
 	lhs = result;
-    } // useNumbers
-		
-
+    } // useNumbers		
+*/
 }
 
