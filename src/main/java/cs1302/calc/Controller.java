@@ -118,8 +118,8 @@ public class Controller implements Initializable {
     private boolean useSub = false;
     private boolean usePow = false;
     private boolean useFac = false;
-
-
+    private String binResult = "";
+   
 
 
     @FXML
@@ -277,6 +277,9 @@ public class Controller implements Initializable {
 	else {
 	    result = ReversePolishNotation.evaluate(iMath, postfix);
 	}
+	
+	Integer resultObj = new Integer(result);
+	binResult = resultObj.toBinaryString(resultObj);	
     }
 
     @FXML
@@ -315,12 +318,8 @@ public class Controller implements Initializable {
 	opLabel.setText(operation);
     }
 
+ 
     public void initialize(URL location, ResourceBundle resources) {
-
-
-
-
-
 
 	assert opLabel != null : "fx:id=\"opLabel\" was not injected: check your FXML file 'calc.fxml'.";
       	assert midPane != null : "fx:id=\"midPane\" was not injected: check your FXML file 'calc.fxml'.";
@@ -328,7 +327,6 @@ public class Controller implements Initializable {
 	assert binPane != null : "fx:id=\"binPane\" was not injected: check your FXML file 'calc.fxml'.";
 	assert calcPane != null : "fx:id=\"calcPane\" was not injected: check your FXML file 'calc.fxml'.";
 	assert mulButton != null : "fx:id=\"mulButton\" was not injected: check your FXML file 'calc.fxml'.";
-
         assert topPane != null : "fx:id=\"topPane\" was not injected: check your FXML file 'calc.fxml'.";
         assert opLabel != null : "fx:id=\"opLabel\" was not injected: check your FXML file 'calc.fxml'.";
         assert midPane != null : "fx:id=\"midPane\" was not injected: check your FXML file 'calc.fxml'.";
@@ -336,7 +334,6 @@ public class Controller implements Initializable {
         assert binPane != null : "fx:id=\"binPane\" was not injected: check your FXML file 'calc.fxml'.";
         assert calcPane != null : "fx:id=\"calcPane\" was not injected: check your FXML file 'calc.fxml'.";
         assert mulButton != null : "fx:id=\"mulButton\" was not injected: check your FXML file 'calc.fxml'.";
-
         assert recButton != null : "fx:id=\"recButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert subButton != null : "fx:id=\"subButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert rButton != null : "fx:id=\"rButton\" was not injected: check your FXML file 'calc.fxml'.";
@@ -356,7 +353,6 @@ public class Controller implements Initializable {
         assert binButton != null : "fx:id=\"binButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert facButton != null : "fx:id=\"facButton\" was not injected: check your FXML file 'calc.fxml'.";
         assert divButton != null : "fx:id=\"divButton\" was not injected: check your FXML file 'calc.fxml'.";
-
 	assert clearButton != null : "fx:id=\"clearButton\" was not injected: check your FXML file 'calc.fxml'.";
 	assert deleteButton != null : "fx:id=\"deleteButton\" was not injected: check your FXML file 'calc.fxml'.";
 	opLabel.setText(operation);
