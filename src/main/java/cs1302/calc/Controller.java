@@ -94,6 +94,8 @@ public class Controller {
 
     public String operation = "";
     public int result = 0;
+    private boolean useRecursion = false;
+    private boolean showBinary = true;
     private String binResult = "";
 
     @FXML
@@ -217,7 +219,7 @@ public class Controller {
 	}
 	Integer resultObj = new Integer(result);
 	binResult = resultObj.toBinaryString(resultObj);	
-	resultLabel.setText(result);
+	resultLabel.setText(Integer.toString(result));
     }
 
     @FXML
@@ -247,7 +249,7 @@ public class Controller {
     @FXML
 	void delete (ActionEvent event) {
 	System.out.println("deleteButton was pressed!");
-	String modString = operation.substring(0, operation.length()-1);
+	String modString = operation.substring(0, operation.length()-2);
 	operation = modString;
     }
 
