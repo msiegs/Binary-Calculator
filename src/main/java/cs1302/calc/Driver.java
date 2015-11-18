@@ -22,15 +22,18 @@ public class Driver extends Application {
 
 	try {
 	    System.out.println("test");
-	    root = FXMLLoader.load(getClass().getResource("/calc.fxml"));
+	    root = FXMLLoader.load(getClass().getResource("/calculator.fxml"));
 	} catch (IOException e) {
+	    System.out.println("IOException has been thrown!");
 	    System.out.println(e);
 	    System.exit(1);
 	} // try
 
 	// FXMLLoader.setController(
         primaryStage.setTitle("CalcFX!");
-	primaryStage.setScene(new Scene(root, 640, 400));
+	primaryStage.setWidth(600);
+	primaryStage.setHeight(400);
+	primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
 
     } // start
