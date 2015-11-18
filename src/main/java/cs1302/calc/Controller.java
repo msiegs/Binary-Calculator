@@ -91,94 +91,43 @@ public class Controller {
 
     public String operation = "";
     public int result = 0;
-    private boolean useRecursion = false;
-    private boolean showBinary = true;
-    private boolean useDiv = false;
-    private boolean useMul = false;
-    private boolean useAdd = false;
-    private boolean useSub = false;
-    private boolean usePow = false;
-    private boolean useFac = false;
     private String binResult = "";
-   
-
 
     @FXML
 	void divide(ActionEvent event) {
 	operation += " / ";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	opLabel.setText(operation);
-	useDiv = true;
-
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
     @FXML
 	void multiply(ActionEvent event) {
 	operation += " * ";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	opLabel.setText(operation);
-	useMul = true;
-
-
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
     @FXML
 	void subtract(ActionEvent event) {
 	operation += " - ";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	opLabel.setText(operation);
-	useSub = true;
-
-
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
     @FXML
 	void addition(ActionEvent event) {
 	operation += " + ";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	opLabel.setText(operation);
-	useAdd = true;
-
-
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
     @FXML
 	void factorial(ActionEvent event) {
 	operation += " ! ";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	opLabel.setText(operation);
-	useFac = true;
-
-
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
 
     @FXML
 	void power(ActionEvent event) {
 	operation += " ^ ";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	opLabel.setText(operation);
-	usePow = true;
-
-
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
     @FXML
@@ -196,121 +145,61 @@ public class Controller {
     @FXML
 	void b0Pressed (ActionEvent event) {
 	operation += "0";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	numPushed = 0;
-	useNumbers(numPushed);
-	opLabel.setText(operation);
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
     @FXML
 	void b1Pressed (ActionEvent event) {
 	operation += "1";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	numPushed = 1;	
-	useNumbers(numPushed);
-	opLabel.setText(operation);
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
     @FXML
 	void b2Pressed (ActionEvent event) {
 	operation += "2";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	numPushed = 2;
-	useNumbers(numPushed);
-	opLabel.setText(operation);
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
     @FXML
 	void b3Pressed (ActionEvent event) {
 	operation += "3";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	numPushed = 3;
-	useNumbers(numPushed);
-	opLabel.setText(operation);
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
     
     @FXML
 	void b4Pressed (ActionEvent event) {
 	operation += "4";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	numPushed = 4;
-	useNumbers(numPushed);
-	opLabel.setText(operation);
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
     @FXML
 	void b5Pressed (ActionEvent event) {
 	operation += "5";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	numPushed = 5;
-	useNumbers(numPushed);
-	opLabel.setText(operation);
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
     @FXML
 	void b6Pressed (ActionEvent event) {
 	operation += "6";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	numPushed = 6;
-	useNumbers(numPushed);
-	opLabel.setText(operation);
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
     @FXML
 	void b7Pressed (ActionEvent event) {
 	operation += "7";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	numPushed = 7;
-	useNumbers(numPushed);
-	opLabel.setText(operation);
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
     @FXML
 	void b8Pressed (ActionEvent event) {
 	operation += "8";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	numPushed = 8;
-	useNumbers(numPushed);
-	opLabel.setText(operation);
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
     
     @FXML
 	void b9Pressed (ActionEvent event) {
 	operation += "9";
-<<<<<<< HEAD
 	operationLabel.setText(operation);
-=======
-	numPushed = 9;
-	useNumbers(numPushed);
-	opLabel.setText(operation);
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
     }
 
     @FXML
@@ -365,100 +254,5 @@ public class Controller {
 	operationLabel.setText(operation);
     }
 
-<<<<<<< HEAD
-=======
- 
-    public void initialize(URL location, ResourceBundle resources) {
-
-	assert opLabel != null : "fx:id=\"opLabel\" was not injected: check your FXML file 'calc.fxml'.";
-      	assert midPane != null : "fx:id=\"midPane\" was not injected: check your FXML file 'calc.fxml'.";
-	assert resultLabel != null : "fx:id=\"resultLabel\" was not injected: check your FXML file 'calc.fxml'.";
-	assert binPane != null : "fx:id=\"binPane\" was not injected: check your FXML file 'calc.fxml'.";
-	assert calcPane != null : "fx:id=\"calcPane\" was not injected: check your FXML file 'calc.fxml'.";
-	assert mulButton != null : "fx:id=\"mulButton\" was not injected: check your FXML file 'calc.fxml'.";
-        assert topPane != null : "fx:id=\"topPane\" was not injected: check your FXML file 'calc.fxml'.";
-        assert opLabel != null : "fx:id=\"opLabel\" was not injected: check your FXML file 'calc.fxml'.";
-        assert midPane != null : "fx:id=\"midPane\" was not injected: check your FXML file 'calc.fxml'.";
-        assert resultLabel != null : "fx:id=\"resultLabel\" was not injected: check your FXML file 'calc.fxml'.";
-        assert binPane != null : "fx:id=\"binPane\" was not injected: check your FXML file 'calc.fxml'.";
-        assert calcPane != null : "fx:id=\"calcPane\" was not injected: check your FXML file 'calc.fxml'.";
-        assert mulButton != null : "fx:id=\"mulButton\" was not injected: check your FXML file 'calc.fxml'.";
-        assert recButton != null : "fx:id=\"recButton\" was not injected: check your FXML file 'calc.fxml'.";
-        assert subButton != null : "fx:id=\"subButton\" was not injected: check your FXML file 'calc.fxml'.";
-        assert rButton != null : "fx:id=\"rButton\" was not injected: check your FXML file 'calc.fxml'.";
-        assert addButton != null : "fx:id=\"addButton\" was not injected: check your FXML file 'calc.fxml'.";
-        assert b0 != null : "fx:id=\"b0\" was not injected: check your FXML file 'calc.fxml'.";
-        assert b1 != null : "fx:id=\"b1\" was not injected: check your FXML file 'calc.fxml'.";
-        assert b2 != null : "fx:id=\"b2\" was not injected: check your FXML file 'calc.fxml'.";
-        assert b3 != null : "fx:id=\"b3\" was not injected: check your FXML file 'calc.fxml'.";
-        assert b4 != null : "fx:id=\"b4\" was not injected: check your FXML file 'calc.fxml'.";
-        assert b5 != null : "fx:id=\"b5\" was not injected: check your FXML file 'calc.fxml'.";
-        assert b6 != null : "fx:id=\"b6\" was not injected: check your FXML file 'calc.fxml'.";
-        assert b7 != null : "fx:id=\"b7\" was not injected: check your FXML file 'calc.fxml'.";
-        assert powButton != null : "fx:id=\"powButton\" was not injected: check your FXML file 'calc.fxml'.";
-        assert b8 != null : "fx:id=\"b8\" was not injected: check your FXML file 'calc.fxml'.";
-        assert lButton != null : "fx:id=\"lButton\" was not injected: check your FXML file 'calc.fxml'.";
-        assert b9 != null : "fx:id=\"b9\" was not injected: check your FXML file 'calc.fxml'.";
-        assert binButton != null : "fx:id=\"binButton\" was not injected: check your FXML file 'calc.fxml'.";
-        assert facButton != null : "fx:id=\"facButton\" was not injected: check your FXML file 'calc.fxml'.";
-        assert divButton != null : "fx:id=\"divButton\" was not injected: check your FXML file 'calc.fxml'.";
-	assert clearButton != null : "fx:id=\"clearButton\" was not injected: check your FXML file 'calc.fxml'.";
-	assert deleteButton != null : "fx:id=\"deleteButton\" was not injected: check your FXML file 'calc.fxml'.";
-	opLabel.setText(operation);
-	resultLabel.setText(Integer.toString(result));
-
-    } // FXML
-
-    // This method is used to determine whether a number will be saved as "lhs" or whether it will be used as rhs and call on an operation.
-      public void useNumbers(int numPushed) {
-	if (useAdd == true) {
-	    useAdd = false;
-	    rhs = numPushed;
-	    if (useRecursion == true) result = rMath.add(lhs, rhs);
-	    else result = iMath.add(lhs, rhs);
-	} // useAdd
-	else if (useSub == true) {
-	    useSub = false;
-	    rhs = numPushed;
-	    if (useRecursion == true) result = rMath.sub(lhs, rhs);
-	    else result = iMath.sub(lhs, rhs);
-	} // useSub
-	else if (useMul == true) {
-	    useMul = false;
-	    rhs = numPushed;
-	    if (useRecursion == true) result = rMath.mul(lhs, rhs);
-	    else result = iMath.mul(lhs, rhs);
-	} // useMul
-	else if (useDiv == true) {
-	    useDiv = false;
-	    rhs = numPushed;
-	    if (useRecursion == true) result = rMath.div(lhs, rhs);
-	    else result = iMath.div(lhs, rhs);
-	} // useDiv
-	else if (usePow == true) {
-	    usePow = false;
-	    rhs = numPushed;
-	    if (useRecursion == true) result = rMath.pow(lhs, rhs);
-	    else result = iMath.pow(lhs, rhs);
-	} // usePow
-	else if (useFac == true) {
-	    useFac = false;
-	    rhs = numPushed;
-	    if (useRecursion == true) result = rMath.fac(lhs);
-	    else result = iMath.fac(lhs);
-	} // useFac
-	resultLabel.setText(Integer.toString(result));
-	lhs = result;
-    } // useNumbers		/
-
-        assert clearButton != null : "fx:id=\"clearButton\" was not injected: check your FXML file 'calc.fxml'.";
-        assert deleteButton != null : "fx:id=\"deleteButton\" was not injected: check your FXML file 'calc.fxml'.";
-        assert equalButton != null : "fx:id=\"equalButton\" was not injected: check your FXML file 'calc.fxml'.";
-	// opLabel.setText(operation);
-
-    } // FXML initialize()
-
-
->>>>>>> 5dec25a2dc6ba3d501ce703c3e625c51f354d37e
 }
 
