@@ -6,12 +6,19 @@
 <?import javafx.scene.layout.*?>
 <?import java.lang.*?>
 <?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
 
 <VBox id="main-pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs1302.calc.Controller">
    <children>
       <BorderPane prefHeight="100.0" prefWidth="600.0">
          <top>
-            <Label fx:id="operationLabel" alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="601.0" style="-fx-background-color: black;" textFill="#2fff00" BorderPane.alignment="CENTER">
+            <Label fx:id="operationLabel" alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="601.0" style="-fx-background-color: black;" text="" textFill="#2fff00" BorderPane.alignment="CENTER">
                <font>
                   <Font size="36.0" />
                </font>
@@ -24,7 +31,7 @@
             </Label>
          </top>
          <bottom>
-            <Label fx:id="resultLabel" alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="603.0" style="-fx-background-color: black;" textFill="RED" BorderPane.alignment="CENTER">
+            <Label fx:id="resultLabel" alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="603.0" style="-fx-background-color: black;" text="" textFill="RED" BorderPane.alignment="CENTER">
                <font>
                   <Font size="36.0" />
                </font>
