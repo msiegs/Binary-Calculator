@@ -16,6 +16,7 @@ public class IterativeMath implements Math {
     } // inc
 
     public int dec(int n) {
+	if (n == 0) return 0;
 	return (n - 1);  
     } // dec
 
@@ -48,12 +49,20 @@ public class IterativeMath implements Math {
     } // mul
 
     public int div(int lhs, int rhs) {
-	int sum = 0; // counter
-	while (lhs >= rhs) {
+	if (rhs == 0) {
+	    throw new java.lang.ArithmeticException();
+	}
+	try {
+	    int sum = 0; // counter
+	    while (lhs >= rhs) {
 		lhs = sub(lhs, rhs);
 		sum = inc(sum);
-	} // while
-	return sum; 
+	    } // while
+	    return sum;
+	}
+	catch (Exception e) {
+	    return 0; 
+	}
     } // div
 
     public int fac(int n) {

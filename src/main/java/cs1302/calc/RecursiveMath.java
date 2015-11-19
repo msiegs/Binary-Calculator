@@ -16,6 +16,7 @@ public class RecursiveMath implements Math {
     } // inc
 
     public int dec(int n) {
+	if (n == 0) return 0;
 	return n - 1;
     } // dec
 
@@ -45,8 +46,16 @@ public class RecursiveMath implements Math {
     } // div
 
     public int div_acc(int count, int lhs, int rhs) {
-	if (lhs < rhs) return count;
-	return div_acc(inc(count), sub(lhs, rhs), rhs);
+	if (rhs == 0) {
+	    throw new java.lang.ArithmeticException(); 
+	}
+	try {
+	    if (lhs < rhs) return count;
+	    return div_acc(inc(count), sub(lhs, rhs), rhs);
+	}
+	catch (Exception e) {
+	    return 0;
+	}
     } // div_acc
 
     public int fac(int n) {
