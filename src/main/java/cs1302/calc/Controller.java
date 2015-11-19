@@ -15,6 +15,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.fxml.Initializable;
 import javafx.scene.paint.Color;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 public class Controller implements Initializable {
 
@@ -212,23 +214,37 @@ public class Controller implements Initializable {
 	    String postfix[] = ReversePolishNotation.infixToPostfix(infix);
 	    if (useRecursion == true) result = ReversePolishNotation.evaluate(rMath, postfix);
 	    else result = ReversePolishNotation.evaluate(iMath, postfix);
-	    Integer resultObj = new Integer(result);
-	    binResult = resultObj.toBinaryString(resultObj);	
-	    resultLabel.setText(Integer.toString(result));
+	    System.out.println(result);
+	}
+	catch (Exception e) {
+	    e.printStackTrace();
+	    String x = "failure";
+	    resultLabel.setText(x);
+	}
+	//   if (result > Integer.MAX_VALUE) {
+	//	System.out.println("Result has exceeded max integer value! Your result has been replaced with the max integer value.");
+	//	result = 0;
+	//	System.out.println("result: " + result);
+	//	Alert exceed = new Alert(AlertType.WARNING);
+	///	exceed.setTitle("Warning!");
+	//	exceed.setHeaderText("You have exceeded the maximum integer value!");
+	//	exceed.setContentText("Your result value has been set to the maximum integer value. Our program cannot handle bigger numbers. Please try again with a smaller number.");
+	//	exceed.showAndWait();
+	//    }
 
-	    supaMike = Integer.toBinaryString(result); // sets the binary integer to the supaMike string
-	    for (int i = 0; i < supaMike.length(); i++) { // sets each binary button according to the binary string
-		char position = supaMike.charAt(supaMike.length()-i-1); 
-		binaryButtons[binaryButtons.length-i-1].setText(Character.toString(position));
-	    }
-	    supaMike = ""; // resets supaMike so he doesn't get too crazy
-	}
-	catch (Exception e) { // avoids numbers that are too big
-	    operation = "";
-	    operationLabel.setText(operation);
-	    result = 0;
-	    resultLabel.setText(Integer.toString(result));
-	}
+    //	    Integer resultObj = new Integer(result);
+    //	    System.out.println("result: " + result);
+    //	    binResult = resultObj.toBinaryString(resultObj);	
+    //	    resultLabel.setText(Integer.toString(result));
+    //	    System.out.println("result: " + result);
+    //
+    //	    supaMike = Integer.toBinaryString(result); // sets the binary integer to the supaMike string
+    //	    for (int i = 0; i < supaMike.length(); i++) { // sets each binary button according to the binary string
+    //		char position = supaMike.charAt(supaMike.length()-i-1); 
+    //		binaryButtons[binaryButtons.length-i-1].setText(Character.toString(position));
+    //	    }
+    //	    System.out.println("result: " + result);
+    //	    supaMike = ""; // resets supaMike so he doesn't get too crazy
     } // equals
 
     @FXML
