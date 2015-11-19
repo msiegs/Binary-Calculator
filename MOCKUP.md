@@ -19,20 +19,19 @@ or Vi.
 
 ## Main GUI
 
-You can include your image, as follows:
 
-![GUI Mockup 1](http://i.imgur.com/X5SZDg0.png)
 
-You can type a description of the mockup here. Include any information about
-additional features you have mocked up in your interface.
+![GUI Mockup 1](http://i.imgur.com/QdRddYU.png)
+
+This is the original mockup. It contains the basic elements such as numbers to be entered and the operations to be used. It includes an area for the input to be displayed and the result to be displayed. Lastly, there is an area for the binary bits to go.
 
 ## GUI with Bit Toggle
 
-Here is another image...
 
-![GUI Mockup 2](http://i.imgur.com/nf6LRol.png)
 
-This mockup includes the binary bit toggle. I designed this way because...
+![GUI Mockup 2](http://i.imgur.com/qE8URLK.png)
+
+This second mockup displays many improvements and is more detailed. The numbers are now displayed in individual buttons with color. The binary bits make an appearance and the elements of the application have an improved layout.
 
 ## Additional Interface Elements
 
