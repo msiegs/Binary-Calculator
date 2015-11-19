@@ -21,7 +21,7 @@ or Vi.
 
 
 
-![GUI Mockup 1](http://i.imgur.com/FpD8RjW.png)
+![GUI Mockup 1](http://i.imgur.com/QdRddYU.png)
 
 This is the original mockup. It contains the basic elements such as numbers to be entered and the operations to be used. It includes an area for the input to be displayed and the result to be displayed. Lastly, there is an area for the binary bits to go.
 
