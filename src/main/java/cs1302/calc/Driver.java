@@ -21,10 +21,8 @@ public class Driver extends Application {
 	Parent root = null;
 
 	try {
-	    System.out.println("test");
 	    root = FXMLLoader.load(getClass().getResource("/calculator.fxml"));
 	} catch (IOException e) {
-	    System.out.println("IOException has been thrown!");
 	    System.out.println(e);
 	    System.exit(1);
 	} // try

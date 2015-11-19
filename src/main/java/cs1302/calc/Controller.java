@@ -1,6 +1,7 @@
 package cs1302.calc;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 import javafx.event.EventHandler;
 import java.net.URL;
@@ -13,8 +14,9 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.fxml.Initializable;
+import javafx.scene.paint.Color;
 
-public class Controller {
+public class Controller implements Initializable {
 
     @FXML
 	public Label operationLabel;
@@ -22,129 +24,101 @@ public class Controller {
     @FXML
 	public Label resultLabel;
 
-    @FXML // fx:id="mulButton"
-	public Button mulButton; // Value injected by FXMLLoader
+    @FXML
+	public FlowPane binaryPane;
 
     @FXML // fx:id="recButton"
 	public Button recButton; // Value injected by FXMLLoader
 
-    @FXML // fx:id="subButton"
-	public Button subButton; // Value injected by FXMLLoader
-
-    @FXML // fx:id="rButton"
-	public Button rightButton; // Value injected by FXMLLoader
-
-    @FXML // fx:id="addButton"
-	public Button addButton; // Value injected by FXMLLoader
-
-    @FXML // fx:id="b0"
-	public Button b0; // Value injected by FXMLLoader
-
-    @FXML // fx:id="b1"
-	public Button b1; // Value injected by FXMLLoader
-
-    @FXML // fx:id="b2"
-	public Button b2; // Value injected by FXMLLoader
-
-    @FXML // fx:id="b3"
-	public Button b3; // Value injected by FXMLLoader
-
-    @FXML // fx:id="b4"
-	public Button b4; // Value injected by FXMLLoader
-
-    @FXML // fx:id="b5"
-	public Button b5; // Value injected by FXMLLoader
-
-    @FXML // fx:id="b6"
-	public Button b6; // Value injected by FXMLLoader
-
-    @FXML // fx:id="b7"
-	public Button b7; // Value injected by FXMLLoader
-
-    @FXML // fx:id="powButton"
-	public Button powButton; // Value injected by FXMLLoader
-
-    @FXML // fx:id="b8"
-	public Button b8; // Value injected by FXMLLoader
-
-    @FXML // fx:id="lButton"
-	public Button leftButton; // Value injected by FXMLLoader
-
-    @FXML // fx:id="b9"
-	public Button b9; // Value injected by FXMLLoader
-
     @FXML // fx:id="binButton"
 	public Button binButton; // Value injected by FXMLLoader
-
-    @FXML // fx:id="facButton"
-	public Button facButton; // Value injected by FXMLLoader
-
-    @FXML // fx:id="divButton"
-	public Button divButton; // Value injected by FXMLLoader
-
-    @FXML
-	public Button deleteButton;
-    
-    @FXML
-	public Button clearButton;
-
-    @FXML
-	public Button equalButton;
-
 
     public String operation = "";
     public int result = 0;
     private boolean useRecursion = false;
     private boolean showBinary = true;
     private String binResult = "";
+    private Button[] binaryButtons = new Button[32];
+
+    @Override
+	public void initialize(java.net.URL location, java.util.ResourceBundle resources) {
+	resultLabel.setText(Integer.toString(result));
+	Label swag = new Label("  31                                                                                                                         16           ");
+	swag.setTextFill(Color.web("#3354ff"));
+	Label jBiebz = new Label("  15                                                                                                                          0            ");
+	for (int i = 0; i < binaryButtons.length; i++) {
+	    if(i % 4 == 0 && i != 0) binaryPane.getChildren().add(new Label("         "));
+	    if(i == 16) binaryPane.getChildren().add(swag);
+	    Button newButton = new Button("0");
+	    newButton.setStyle("-fx-background-color: transparent");
+	    newButton.setOnAction(new EventHandler <ActionEvent>() {
+		    @Override
+			public void handle (ActionEvent event) {
+			if(newButton.getText().equals("0")) newButton.setText("1");
+			else newButton.setText("0");
+		    }
+		}); // setOnAction
+	    binaryButtons[i] = newButton;
+	    binaryPane.getChildren().add(binaryButtons[i]);
+	} // for
+	binaryPane.getChildren().add(jBiebz);
+    } // initialize
 
     @FXML
 	void divide(ActionEvent event) {
-	operation += " / ";
+	if (operation.charAt(operation.length()-1) == ' ') operation += "/ ";
+	else operation += " / ";
 	operationLabel.setText(operation);
     }
 
     @FXML
 	void multiply(ActionEvent event) {
-	operation += " * ";
+	if (operation.charAt(operation.length()-1) == ' ') operation += "* ";
+	else operation += " * ";
 	operationLabel.setText(operation);
     }
 
     @FXML
 	void subtract(ActionEvent event) {
-	operation += " - ";
+	if (operation.charAt(operation.length()-1) == ' ') operation += "- ";
+	else operation += " - ";
 	operationLabel.setText(operation);
     }
 
     @FXML
 	void addition(ActionEvent event) {
-	operation += " + ";
+	if (operation.charAt(operation.length()-1) == ' ') operation += "+ ";
+	else operation += " + ";
 	operationLabel.setText(operation);
     }
 
     @FXML
 	void factorial(ActionEvent event) {
-	operation += " ! ";
+	if (operation.charAt(operation.length()-1) == ' ') operation += "! ";
+	else operation += " ! ";
 	operationLabel.setText(operation);
     }
 
 
     @FXML
 	void power(ActionEvent event) {
-	operation += " ^ ";
+	if (operation.charAt(operation.length()-1) == ' ') operation += "^ ";
+	else operation += " ^ ";
 	operationLabel.setText(operation);
     }
 
     @FXML
 	void leftShift(ActionEvent event) {
-	System.out.println("lButton pushed!");
-	// !!!
+	if (operation.charAt(operation.length()-1) == ' ') operation += "<< ";
+	else operation += " << ";
+	operationLabel.setText(operation);
     }
 
     @FXML
 	void rightShift(ActionEvent event) {
-	System.out.println("rButton pushed!");
-	// !!!
+	if (operation.charAt(operation.length()-1) == ' ') operation += ">> ";
+	else operation += " >> ";
+	operationLabel.setText(operation);
     }
 
     @FXML
@@ -211,7 +185,8 @@ public class Controller {
 	void equals (ActionEvent event) {
 	RecursiveMath rMath = new RecursiveMath();
 	IterativeMath iMath = new IterativeMath();
-	String infix[] = operation.split(" ");
+	String sillyString = operation.replaceAll(">>",">").replaceAll("<<","<");
+	String infix[] = sillyString.split(" ");
 	String postfix[] = ReversePolishNotation.infixToPostfix(infix);
 	if (useRecursion == true) result = ReversePolishNotation.evaluate(rMath, postfix);
 	else {
@@ -248,9 +223,12 @@ public class Controller {
 
     @FXML
 	void delete (ActionEvent event) {
-	System.out.println("deleteButton was pressed!");
-	String modString = operation.substring(0, operation.length()-2);
-	operation = modString;
+	if (operation.equals("")) {}
+	else if (operation.length() == 1) operation = "";
+	else if (operation.charAt(operation.length()-2) == '<' || operation.charAt(operation.length()-2) == '>') operation = operation.substring(0, operation.length()-3);
+	else if (operation.charAt(operation.length()-1) != ' ') operation = operation.substring(0, operation.length()-1); 
+	else operation = operation.substring(0, operation.length()-2);
+	operationLabel.setText(operation);
     }
 
     @FXML
@@ -260,4 +238,3 @@ public class Controller {
     }
 
 }
-
