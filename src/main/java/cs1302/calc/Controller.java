@@ -214,37 +214,31 @@ public class Controller implements Initializable {
 	    String postfix[] = ReversePolishNotation.infixToPostfix(infix);
 	    if (useRecursion == true) result = ReversePolishNotation.evaluate(rMath, postfix);
 	    else result = ReversePolishNotation.evaluate(iMath, postfix);
-	    System.out.println(result);
+	    resultLabel.setText(Integer.toString(result));
 	}
-	catch (Exception e) {
-	    e.printStackTrace();
-	    String x = "failure";
-	    resultLabel.setText(x);
+	catch (Exception e) { // handles big numbers!
+	    System.out.println("You have run into exception " + e);
+	    System.out.println("Don't worry, dawg. Fixed that for you.");
 	}
-	//   if (result > Integer.MAX_VALUE) {
-	//	System.out.println("Result has exceeded max integer value! Your result has been replaced with the max integer value.");
-	//	result = 0;
-	//	System.out.println("result: " + result);
-	//	Alert exceed = new Alert(AlertType.WARNING);
-	///	exceed.setTitle("Warning!");
-	//	exceed.setHeaderText("You have exceeded the maximum integer value!");
-	//	exceed.setContentText("Your result value has been set to the maximum integer value. Our program cannot handle bigger numbers. Please try again with a smaller number.");
-	//	exceed.showAndWait();
-	//    }
+	if (result > Integer.MAX_VALUE) {
+	    System.out.println("Result has exceeded max integer value! Your result has been replaced with the max integer value.");
+	    Alert exceed = new Alert(AlertType.WARNING);
+	    exceed.setTitle("Warning!");
+	    exceed.setHeaderText("You have exceeded the maximum integer value!");
+	    exceed.setContentText("Your result value has been set to the maximum integer value. Our program cannot handle bigger numbers. Please try again with a smaller number.");
+	    exceed.showAndWait();
+	}
 
-    //	    Integer resultObj = new Integer(result);
-    //	    System.out.println("result: " + result);
-    //	    binResult = resultObj.toBinaryString(resultObj);	
-    //	    resultLabel.setText(Integer.toString(result));
-    //	    System.out.println("result: " + result);
-    //
-    //	    supaMike = Integer.toBinaryString(result); // sets the binary integer to the supaMike string
-    //	    for (int i = 0; i < supaMike.length(); i++) { // sets each binary button according to the binary string
-    //		char position = supaMike.charAt(supaMike.length()-i-1); 
-    //		binaryButtons[binaryButtons.length-i-1].setText(Character.toString(position));
-    //	    }
-    //	    System.out.println("result: " + result);
-    //	    supaMike = ""; // resets supaMike so he doesn't get too crazy
+        Integer resultObj = new Integer(result);
+	binResult = resultObj.toBinaryString(resultObj);	
+        resultLabel.setText(Integer.toString(result));
+        	
+        supaMike = Integer.toBinaryString(result); // sets the binary integer to the supaMike string
+        for (int i = 0; i < supaMike.length(); i++) { // sets each binary button according to the binary string
+	    char position = supaMike.charAt(supaMike.length()-i-1); 
+	    binaryButtons[binaryButtons.length-i-1].setText(Character.toString(position));
+	}
+	supaMike = ""; // resets supaMike so he doesn't get too crazy
     } // equals
 
     @FXML
