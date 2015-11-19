@@ -39,13 +39,15 @@ public class Controller implements Initializable {
     private boolean showBinary = true;
     private String binResult = "";
     private Button[] binaryButtons = new Button[32];
+    private Label swag;
+    private Label jBiebz;
 
     @Override
 	public void initialize(java.net.URL location, java.util.ResourceBundle resources) {
 	resultLabel.setText(Integer.toString(result));
-	Label swag = new Label("  31                                                                                                                         16           ");
+	swag = new Label("  31                                                                                                                         16           ");
 	swag.setTextFill(Color.web("#3354ff"));
-	Label jBiebz = new Label("  15                                                                                                                          0            ");
+	jBiebz = new Label("  15                                                                                                                          0            ");
 	for (int i = 0; i < binaryButtons.length; i++) {
 	    if(i % 4 == 0 && i != 0) binaryPane.getChildren().add(new Label("         "));
 	    if(i == 16) binaryPane.getChildren().add(swag);
@@ -214,10 +216,22 @@ public class Controller implements Initializable {
 	if (showBinary != true) {
 	    showBinary = true;
 	    binButton.setText("Hide Binary"); // change button to "Hide Binary"
+	    for (int i = 0; i < binaryButtons.length; i++) {
+		binaryButtons[i].setVisible(true);
+		binaryButtons[i].setDisable(false);
+		swag.setVisible(true);
+		jBiebz.setVisible(true);
+	    }
 	}
 	else {
 	    showBinary = false;
 	    binButton.setText("Show Binary"); // change button to "Show Binary"
+	    for (int i = 0; i < binaryButtons.length; i++) {
+		binaryButtons[i].setVisible(false);
+		binaryButtons[i].setDisable(true);
+		swag.setVisible(false);
+		jBiebz.setVisible(false);
+	    }
 	}
     }
 
@@ -235,6 +249,8 @@ public class Controller implements Initializable {
 	void clear (ActionEvent event) {
 	operation = "";
 	operationLabel.setText(operation);
+	result = 0;
+	resultLabel.setText(Integer.toString(result));
     }
 
 }

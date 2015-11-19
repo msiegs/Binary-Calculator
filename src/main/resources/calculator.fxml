@@ -11,10 +11,16 @@
   <children>
     <BorderPane prefHeight="100.0" prefWidth="600.0">
       <top>
-        <Label fx:id="operationLabel" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="600.0" />
+        <Label fx:id="operationLabel" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="600.0" >
+	  <font>
+	    <Font name = "System Bold" size="20.0"/>
+	  </font></Label>
       </top>
       <bottom>
-        <Label fx:id="resultLabel" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="600.0" />
+        <Label fx:id="resultLabel" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="600.0" >
+	  <font>
+	    <Font name = "System Bold" size="20.0"/>
+	</font></Label>
       </bottom>
     </BorderPane>
     <FlowPane fx:id="binaryPane" prefHeight="93.0" prefWidth="600.0" />

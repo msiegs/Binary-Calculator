@@ -28,7 +28,7 @@ public class Driver extends Application {
 	} // try
 
 	// FXMLLoader.setController(
-        primaryStage.setTitle("CalcFX!");
+        primaryStage.setTitle("C@lcul8r: Brought to You by Easy Siegs & The Yvetteran");
 	primaryStage.setWidth(600);
 	primaryStage.setHeight(400);
 	primaryStage.setScene(new Scene(root, 600, 400));
